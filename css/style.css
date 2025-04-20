@@ -134,6 +134,22 @@ a:hover {
     color: var(--primary-color);
 }
 
+/* New email icon styling */
+.email-icon {
+    margin-top: 30px;
+}
+
+.email-icon a {
+    font-size: 2rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.email-icon a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.2);
+}
+
 .contact-box {
     background-color: white;
     border-radius: 20px;
@@ -502,6 +518,23 @@ footer {
     padding: 0 20px;
 }
 
+/* Updated footer styles */
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right .social-icons {
+    justify-content: flex-end;
+}
+
 /* Modal */
 .modal {
     display: none;
@@ -513,12 +546,13 @@ footer {
     height: 100%;
     background-color: rgba(0, 0, 0, 0);
     transition: background-color 0.3s ease;
+    overflow-y: auto;
 }
 
 .modal-content {
     position: relative;
     background-color: white;
-    margin: 10% auto;
+    margin: 5vh auto; /* Changed from 10% to 5vh */
     padding: 30px;
     width: 80%;
     max-width: 700px;
@@ -528,8 +562,8 @@ footer {
     transform: scale(0.8);
     opacity: 0;
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
-
 }
+
 .modal.active .modal-content {
     transform: scale(1);
     opacity: 1;
@@ -699,6 +733,33 @@ footer {
         font-size: 2rem;
         text-align: center;
     }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .footer-left, .footer-center, .footer-right {
+        text-align: center;
+    }
+    
+    .footer-right .social-icons {
+        justify-content: center;
+    }
+}
+.email-icon {
+    margin-top: 30px;
+}
+
+.email-icon a {
+    font-size: 2rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.email-icon a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.2);
 }
 
 @media (max-width: 480px) {
@@ -720,17 +781,8 @@ footer {
         font-size: 1.5rem;
     }
     
-    .contact-box {
-        width: 100%;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .footer-left, .footer-center {
-        margin-bottom: 15px;
+    .email-icon {
+        margin-top: 20px;
     }
     
     .card {

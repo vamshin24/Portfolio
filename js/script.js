@@ -184,13 +184,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Open modal with animation
     if (readMoreButtons && modal && modalBody) {
         readMoreButtons.forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function(e) {
                 const contentId = this.getAttribute('data-id');
                 const content = getModalContent(contentId);
                 
                 modalBody.innerHTML = content;
                 modal.style.display = 'block';
                 
+                const buttonPosition = this.getBoundingClientRect();
+            const modalContent = modal.querySelector('.modal-content');
+            
                 // Force a reflow before adding the active class for the animation to work
                 void modal.offsetWidth;
                 modal.classList.add('active');
