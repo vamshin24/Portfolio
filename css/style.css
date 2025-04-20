@@ -86,6 +86,27 @@ a:hover {
 .navbar-links a {
     margin-left: 25px;
     font-weight: 500;
+    position: relative;
+}
+
+.navbar-links a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+.navbar-links a:hover:after,
+.navbar-links a.active:after {
+    width: 100%;
+}
+
+.navbar-links a.active {
+    color: var(--primary-color);
 }
 
 /* Hero Section */
@@ -272,7 +293,7 @@ a:hover {
     60% { transform: translateY(-10px); }
 }
 
-/* About Section */
+/* About Section (Index Page) */
 .about-section {
     background-color: #f9f9f9;
 }
@@ -433,12 +454,31 @@ a:hover {
     border-radius: 30px;
     cursor: pointer;
     font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.read-more:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--secondary-color);
+    transition: height 0.3s ease;
+    z-index: -1;
 }
 
 .read-more:hover {
-    background-color: var(--secondary-color);
     transform: translateY(-3px);
+    color: white;
+}
+
+.read-more:hover:before {
+    height: 100%;
 }
 
 /* Fun Section - now integrated into Projects */
@@ -511,6 +551,86 @@ footer {
     cursor: pointer;
 }
 
+/* Added Styles for About Page */
+/* About Page Section Styles */
+#about-me.about-section {
+    padding-top: 120px; /* Account for fixed navbar */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.highlight {
+    color: var(--secondary-color);
+}
+
+/* About Page Content Layout */
+#about-me .about-content {
+    display: flex;
+    gap: 60px;
+    flex-direction: row-reverse; /* Image on right, text on left */
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#about-me .about-text {
+    flex: 1;
+    max-width: 60%;
+}
+
+#about-me .about-text p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+#about-me .profile-image {
+    flex: 1;
+    max-width: 40%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#about-me .profile-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+/* Expertise and Interests Sections */
+.expertise-section,
+.interests-section {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.expertise-column,
+.interests-column {
+    flex: 1;
+}
+
+.expertise-column h3,
+.interests-column h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.expertise-column ul,
+.interests-column ul {
+    list-style: none;
+}
+
+.expertise-column li,
+.interests-column li {
+    margin-bottom: 8px;
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
     .hero-quote {
@@ -527,6 +647,11 @@ footer {
     
     .cards-container, .featured-cards {
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+    
+    #about-me .about-text,
+    #about-me .profile-image {
+        max-width: 100%;
     }
 }
 
@@ -559,6 +684,20 @@ footer {
     
     .card {
         height: 450px;
+    }
+    
+    #about-me .about-content {
+        flex-direction: column-reverse;
+    }
+    
+    .expertise-section,
+    .interests-section {
+        flex-direction: column;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        text-align: center;
     }
 }
 
@@ -597,91 +736,35 @@ footer {
     .card {
         height: 400px;
     }
-    /* Add to style.css */
-    .hidden {
+}
+
+/* Additional Existing Styles */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.8s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body {
+    animation: fadeInPage 0.8s ease forwards;
+}
+
+@keyframes fadeInPage {
+    from {
         opacity: 0;
         transform: translateY(20px);
-        transition: opacity 0.6s ease, transform 0.8s ease;
     }
-    
-    .fade-in {
+    to {
         opacity: 1;
         transform: translateY(0);
     }
-    /* Enhanced button hover effect */
-    .read-more {
-        background-color: var(--primary-color);
-        color: white;
-        border: none;
-        padding: 10px 30px;
-        border-radius: 30px;
-        cursor: pointer;
-        font-weight: 500;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-        transition: color 0.3s ease, transform 0.3s ease;
-    }
-
-    .read-more:before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 0;
-        background-color: var(--secondary-color);
-        transition: height 0.3s ease;
-        z-index: -1;
-    }
-
-    .read-more:hover {
-        transform: translateY(-3px);
-        color: white;
-    }
-
-    .read-more:hover:before {
-        height: 100%;
-    }
-
-    /* Enhanced navbar link hover effect */
-    .navbar-links a {
-        margin-left: 25px;
-        font-weight: 500;
-        position: relative;
-    }
-
-    .navbar-links a:after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -4px;
-        left: 0;
-        background-color: var(--secondary-color);
-        transition: width 0.3s ease;
-    }
-
-    .navbar-links a:hover:after {
-        width: 100%;
-    }
-    /* Add to style.css */
-    body {
-        animation: fadeInPage 0.8s ease forwards;
-    }
-
-    @keyframes fadeInPage {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    
-    .stagger-delay-1 { transition-delay: 0.1s; }
-    .stagger-delay-2 { transition-delay: 0.2s; }
-    .stagger-delay-3 { transition-delay: 0.3s; }
 }
+
+.stagger-delay-1 { transition-delay: 0.1s; }
+.stagger-delay-2 { transition-delay: 0.2s; }
+.stagger-delay-3 { transition-delay: 0.3s; }
