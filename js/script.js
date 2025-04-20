@@ -10,10 +10,19 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollArrow.addEventListener('click', function() {
             const navbarHeight = document.querySelector('.navbar').offsetHeight;
             const workSectionTop = workSection.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+            
             window.scrollTo({
                 top: workSectionTop,
                 behavior: 'smooth'
             });
+            
+            // Optional: Force animation of work section elements when scrolled to
+            const workSectionElements = workSection.querySelectorAll('.hidden');
+            setTimeout(() => {
+                workSectionElements.forEach(el => {
+                    el.classList.add('fade-in');
+                });
+            }, 500); // Small delay to ensure scroll completes first
         });
     }
     
@@ -75,6 +84,121 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    const animatedElements = document.querySelectorAll('.section-heading, .card, .about-content, .profile-image');
+    
+    // Add the 'hidden' class to all selected elements (makes them initially invisible)
+    animatedElements.forEach(el => {
+        el.classList.add('hidden');
+    });
+    initScrollAnimations();
+    animateCards();
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // When element is in view
+            if (entry.isIntersecting) {
+                // Add animation class
+                entry.target.classList.add('fade-in');
+                // Stop observing after animation
+                scrollObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,           // Use viewport as root
+        threshold: 0.15,      // 15% of item visible
+        rootMargin: '0px 0px -100px 0px' // Triggers slightly before element enters viewport
+    });
+    animatedElements.forEach(el => {
+        scrollObserver.observe(el);
+    });
+    
+    // Smooth page transitions
+    document.querySelectorAll('a[href^="about.html"], a[href^="index.html"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Only process internal links
+            if (this.href.includes('html')) {
+                e.preventDefault();
+                
+                // Begin exit animation
+                document.body.style.opacity = 0;
+                document.body.style.transform = 'translateY(-20px)';
+                document.body.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                
+                // After animation completes, navigate to the new page
+                setTimeout(() => {
+                    window.location.href = this.href;
+                }, 300);
+            }
+        });
+    });
+    // Animation on page load/scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target); // Stop observing once animation is triggered
+            }
+        });
+    }, {
+        root: null, // viewport
+        threshold: 0.15, // trigger when 15% visible
+        rootMargin: '0px'
+    });
+    
+    // Observe elements with animate class
+    document.querySelectorAll('.animate').forEach(element => {
+        element.classList.add('hidden');
+        observer.observe(element);
+    });
+    
+    // Special handling for hero section - animate immediately
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+        heroContent.classList.add('hidden');
+        setTimeout(() => {
+            heroContent.classList.add('fade-in');
+        }, 300);
+    }
+  
+    // Close modal when clicking the X
+    if (closeModal && modal) {
+        closeModal.addEventListener('click', function() {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        });
+    }
+
+    // Close modal when clicking outside
+    if (modal) {
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.classList.remove('active');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 300);
+            }
+        });
+    }
+
+    // Open modal with animation
+    if (readMoreButtons && modal && modalBody) {
+        readMoreButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const contentId = this.getAttribute('data-id');
+                const content = getModalContent(contentId);
+                
+                modalBody.innerHTML = content;
+                modal.style.display = 'block';
+                
+                // Force a reflow before adding the active class for the animation to work
+                void modal.offsetWidth;
+                modal.classList.add('active');
+            });
+        });
+    }
+
+    
     
     // Content for modals
     function getModalContent(id) {
@@ -173,3 +297,47 @@ document.addEventListener('DOMContentLoaded', function() {
         return contents[id] || '<h2>Content coming soon!</h2>';
     }
 });
+function initScrollAnimations() {
+    // Elements to animate when scrolled into view
+    const animatedElements = document.querySelectorAll('.section-heading, .card, .about-content, .profile-image');
+    
+    // Apply initial hidden state
+    animatedElements.forEach(el => {
+        el.classList.add('hidden');
+    });
+    
+    // Create observer for scroll animations
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // When element is in view
+            if (entry.isIntersecting) {
+                // Add animation class
+                entry.target.classList.add('fade-in');
+                // Stop observing after animation
+                scrollObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,
+        threshold: 0.15, // 15% of item visible
+        rootMargin: '0px 0px -100px 0px' // Triggers slightly before element enters viewport
+    });
+    
+    // Start observing elements
+    animatedElements.forEach(el => {
+        scrollObserver.observe(el);
+    });
+}
+
+// Add staggered animation to card sections
+function animateCards() {
+    const sections = document.querySelectorAll('.cards-container');
+    
+    sections.forEach(section => {
+        const cards = section.querySelectorAll('.card');
+        
+        cards.forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.1}s`;
+        });
+    });
+}
