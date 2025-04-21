@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const workSection = document.getElementById('work-section');
     const darkModeToggle = document.querySelector('.dark-mode-toggle');
     const icon = darkModeToggle.querySelector('i');
-    
     // Check for saved dark mode preference
     const savedMode = localStorage.getItem('darkMode');
     if (savedMode === 'enabled') {
@@ -210,6 +209,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 </ul>
                 <p>Used for processing large datasets in resource-constrained environments with 70% improvement in processing time.</p>
                 <p>Technologies used: Go, gRPC, Protocol Buffers, Docker</p>
+            `,
+            'project4': `
+                <h2>Project 4 Title</h2>
+                <p>Details about Project 4...</p>
+            `,
+            'project5': `
+                <h2>Project 5 Title</h2>
+                <p>Details about Project 5...</p>
+            `,
+            'fun-project3': `
+                <h2>Fun Project 3 Title</h2>
+                <p>Details about Fun Project 3...</p>
+            `,
+            'fun-project4': `
+                <h2>Fun Project 4 Title</h2>
+                <p>Details about Fun Project 4...</p>
+            `,
+            'fun-project5': `
+                <h2>Fun Project 5 Title</h2>
+                <p>Details about Fun Project 5...</p>
             `,
             'ar-grocery': `
                 <h2>AR Grocery Shopping Experience</h2>

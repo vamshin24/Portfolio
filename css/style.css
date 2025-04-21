@@ -1,8 +1,8 @@
 /* Base Styles */
 :root {
-    --primary-color: #1a1a2e; /* Deep blue */
-    --secondary-color: #ff6b6b; /* Soft orange */
-    --accent-color: #9370db; /* Soft purple */
+    --primary-color: #4b4646; /* Deep blue */
+    --secondary-color: #585555; /* Soft orange */
+    --accent-color: #8bffe8b8; /* Soft purple */
     --light-color: #f8f9fa;
     --dark-color: #16213e;
     --text-color: #333;
@@ -77,7 +77,11 @@ a:hover {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
-
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Add spacing between items */
+}
 .navbar-logo a {
     font-size: 1.5rem;
     font-weight: 600;
@@ -128,7 +132,7 @@ a:hover {
 }
 
 .hero-quote {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     font-weight: 600;
     margin-bottom: 40px;
     color: var(--primary-color);
@@ -169,7 +173,7 @@ a:hover {
 
 .social-icons a {
     font-size: 1.8rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -298,7 +302,7 @@ a:hover {
 
 .bounce-arrow {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     animation: bounce 2s infinite;
     cursor: pointer;
 }
@@ -504,8 +508,9 @@ a:hover {
 
 /* Footer */
 footer {
-    background-color: var(--dark-color);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
     padding: 30px 0;
 }
 
@@ -664,6 +669,185 @@ footer {
 .interests-column li {
     margin-bottom: 8px;
 }
+.education-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.education-list li {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.education-details {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    display: block;
+    margin-top: 5px;
+}
+/* Back to Top Button */
+.back-to-top {
+    font-size: 1.5rem;
+    bottom: 30px;
+    right: 60px;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    color: var(--secondary-color);
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    margin-right: 40px;
+    height: 60px;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+
+}
+
+.back-to-top i {
+    font-size: 2rem;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { 
+        transform: translateY(0); /* Normal position */
+    }
+    40% { 
+        transform: translateY(-20px); /* Move up by 20px at the peak */
+    }
+    60% { 
+        transform: translateY(-10px); /* Move slightly up after peak */
+    }
+}
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+color: #f0f0f0;
+}
+
+body.dark-mode .navbar {
+    background-color: rgba(30, 30, 30, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .navbar a, 
+body.dark-mode .navbar-logo a {
+    color: #f0f0f0;
+}
+
+body.dark-mode .hero-section {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .hero-quote {
+    color: #f0f0f0;
+}
+
+body.dark-mode .contact-box {
+    background-color: rgba(30, 30, 30, 0.95); /* Add a background color for dark mode */
+    color: var(--light-color); /* Change text color for dark mode */
+    border: 1px solid var(--light-border-color); /* Optional: Add a border for better visibility */
+}
+body.dark-mode .social-icons a {
+    color: var(--light-color); /* Change the icon color in dark mode */
+}
+
+body.dark-mode .social-icons a:hover {
+    color: var(--accent-color); /* Optional: Add a hover color for the icons in dark mode */
+}
+
+body.dark-mode .card {
+    background-color: #2a2a2a;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .card-content {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode .card-logo {
+    background-color: #333;
+}
+
+body.dark-mode .about-section {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .work-section {
+    background-color: #121212;
+}
+
+body.dark-mode .modal-content {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode .read-more {
+    background-color: var(--accent-color);
+}
+body.dark-mode footer {
+    background-color: rgba(30, 30, 30, 0.95); /* Dark background for footer */
+    color: var(--light-color); /* Light text color for dark mode */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Adjust shadow for dark mode */
+}
+
+body.dark-mode .footer-content a {
+    color: var(--light-color); /* Ensure links in the footer are visible in dark mode */
+}
+
+body.dark-mode .footer-content a:hover {
+    color: var(--accent-color); /* Optional: Add a hover effect for links in dark mode */
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background-color: var(--primary-color);
+color: white;
+cursor: pointer;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+transition: all 0.3s ease;
+margin-right: 20px;
+}
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+.dark-mode-toggle i {
+    font-size: 1.2rem;
+}
+
+    
+    footer .social-icons a {
+        font-size: 1.5rem;
+        color: var(--secondary-color); /* Changed from primary-color to secondary-color */
+        transition: transform 0.3s ease, color 0.3s ease;
+        margin: 0 10px;
+    }
+    
+    footer .social-icons a:hover {
+        color: var(--accent-color); /* Changed to accent-color */
+        transform: scale(1.2);
+    }
+.stagger-delay-1 { transition-delay: 0.1s; }
+.stagger-delay-2 { transition-delay: 0.2s; }
+.stagger-delay-3 { transition-delay: 0.3s; }
+
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
@@ -791,19 +975,15 @@ footer {
         height: 400px;
     }
     .back-to-top {
-        bottom: 20px;
-        right: 20px;
-        width: 40px;
-        height: 40px;
+        right: 15px;
+        bottom: 15px;
     }
     
     .dark-mode-toggle {
         width: 35px;
         height: 35px;
     }
-}
-
-/* Additional Existing Styles */
+    /* Additional Existing Styles */
 .hidden {
     opacity: 0;
     transform: translateY(20px);
@@ -829,138 +1009,5 @@ body {
         transform: translateY(0);
     }
 }
-    /* Back to Top Button */
-    .back-to-top {
-        position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: var(--secondary-color);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 999;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        animation: bounce 2s infinite;
-    }
-
-    .back-to-top.visible {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .back-to-top:hover {
-        transform: translateY(-5px);
-    }
-
-    .back-to-top i {
-        font-size: 1.5rem;
-    }
-    /* Dark Mode Styles */
-    body.dark-mode {
-        background-color: #121212;
-    color: #f0f0f0;
-    }
-
-    body.dark-mode .navbar {
-        background-color: rgba(30, 30, 30, 0.95);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    body.dark-mode .navbar a, 
-    body.dark-mode .navbar-logo a {
-        color: #f0f0f0;
-    }
-
-    body.dark-mode .hero-section {
-        background-color: #1a1a1a;
-    }
-
-    body.dark-mode .hero-quote {
-        color: #f0f0f0;
-    }
-
-    body.dark-mode .contact-box {
-        background-color: #2a2a2a;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    body.dark-mode .card {
-        background-color: #2a2a2a;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    body.dark-mode .card-content {
-        background-color: #2a2a2a;
-    }
-
-    body.dark-mode .card-logo {
-        background-color: #333;
-    }
-
-    body.dark-mode .about-section {
-        background-color: #1a1a1a;
-    }
-
-    body.dark-mode .work-section {
-        background-color: #121212;
-    }
-
-    body.dark-mode .modal-content {
-        background-color: #2a2a2a;
-    }
-
-    body.dark-mode .read-more {
-        background-color: var(--accent-color);
-    }
-
-    /* Dark mode toggle button */
-    .dark-mode-toggle {
-        position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    color: white;
-    cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    margin-right: 20px;
-    }
-    .navbar-right {
-        display: flex;
-        align-items: center;
-    }
-
-    .dark-mode-toggle:hover {
-        transform: scale(1.1);
-    }
-
-    .dark-mode-toggle i {
-        font-size: 1.2rem;
-    }
-    footer .social-icons a {
-        font-size: 1.5rem;
-        color: var(--secondary-color); /* Changed from primary-color to secondary-color */
-        transition: transform 0.3s ease, color 0.3s ease;
-        margin: 0 10px;
-    }
-    
-    footer .social-icons a:hover {
-        color: var(--accent-color); /* Changed to accent-color */
-        transform: scale(1.2);
-    }
-.stagger-delay-1 { transition-delay: 0.1s; }
-.stagger-delay-2 { transition-delay: 0.2s; }
-.stagger-delay-3 { transition-delay: 0.3s; }
+}
 }
