@@ -81,6 +81,7 @@ a:hover {
 .navbar-links {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px; /* Add spacing between items */
 }
 .navbar-logo a {
@@ -881,6 +882,8 @@ margin-right: 20px;
 
 @media (max-width: 768px) {
     .navbar {
+        flex-direction: column; /* Stack the navbar items vertically */
+        align-items: flex-start; /* Align items to the left */
         padding: 15px 20px;
     }
     .dark-mode-toggle {
