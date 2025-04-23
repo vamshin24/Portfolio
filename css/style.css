@@ -845,7 +845,7 @@ margin-right: 20px;
     }
     
     footer .social-icons a:hover {
-        color: var(--accent-color); /* Changed to accent-color */
+        color: var(--secondary-color); /* Changed to accent-color */
         transform: scale(1.2);
     }
 .stagger-delay-1 { transition-delay: 0.1s; }
