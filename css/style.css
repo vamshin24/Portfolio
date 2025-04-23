@@ -87,6 +87,7 @@ a:hover {
 .navbar-logo a {
     font-size: 1.5rem;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 .navbar-links a {
@@ -890,8 +891,14 @@ margin-right: 20px;
         margin-right: 10px;
     }
     .navbar-links a {
+        flex-direction: column;
         margin-left: 15px;
         font-size: 0.9rem;
+    }
+    .navbar-links {
+        flex-direction: column; /* Stack the links vertically */
+        width: 100%; /* Take full width */
+        gap: 20px; /* Adjust spacing between links */
     }
     
     .hero-quote {
