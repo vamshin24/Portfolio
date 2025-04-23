@@ -149,112 +149,80 @@ document.addEventListener('DOMContentLoaded', function() {
         const contents = {
             'addverb': `
                 <h2>Addverb Technologies</h2>
-                <h4>Robotics Engineer | 2022-2024</h4>
-                <p>At Addverb Technologies, I specialized in designing and implementing robotic solutions for warehouse automation.</p>
+                <h4>Robotics Software Engineer | 2022 - 2023</h4>
+                <p>Worked on full-stack development and systems engineering for warehouse robotics, focusing on automation, real-time coordination, and backend optimization using Java, Python, and messaging systems like Kafka and Redis. Delivered scalable solutions that enhanced performance, reliability, and throughput in real-world industrial environments.</p>
                 <ul>
-                    <li>Led the development of an autonomous navigation system that improved warehouse efficiency by 30%</li>
-                    <li>Collaborated with cross-functional teams to integrate robotic systems with existing warehouse management software</li>
-                    <li>Designed and implemented machine vision algorithms for object recognition and sorting</li>
-                    <li>Developed custom firmware for embedded systems controlling robotic arms and conveyor systems</li>
+                    <li>Designed and deployed a DWS (Dimensioning, Weighing, Scanning) system with microservices architecture and REST APIs, improving inbound logistics automation by 80%.</li>
+                    <li>Enhanced robotic communication reliability by implementing TCP/IP socket communication and PLC programming, reducing signal transmission latency by 20%.</li>
+                    <li>Refactored warehouse control system (WCS) scheduling logic in Python (Django), resolving 70+ bugs and improving storage efficiency by 35%.</li>
+                    <li>Optimized inter-system messaging using Redis, Kafka, and RabbitMQ to increase real-time coordination between robotic subsystems (Zippy and SortIE) by 15%.</li>
+                    <li>Led the architecture for an inbound palletization system using Spring Boot and Maven, boosting throughput and warehouse efficiency by 40%.</li>
                 </ul>
-                <p>Technologies used: ROS, Python, C++, Computer Vision, Machine Learning, Embedded Systems</p>
+                <p></p>
+                <p>Techstack used: Java, Spring Boot, MSSQL, Redis, Kafka, RabbitMQ, Python, Django, TCP/IP, PLC Programming.</p>
             `,
             'opennets': `
                 <h2>OpenNets</h2>
-                <h4>Software Developer | 2020-2022</h4>
-                <p>At OpenNets, I worked on developing network infrastructure solutions and communication systems.</p>
+                <h4>Full Stack Developer Intern| May 2021 - July 2021</h4>
+                <p>Built a network simulation platform and interactive UI to support custom topology testing and performance analysis. Focused on backend logic, real-time simulation, and frontend improvements using Mininet, Node.js, MongoDB, and AngularJS.</p>
                 <ul>
-                    <li>Built resilient network monitoring tools that reduced downtime by 45%</li>
-                    <li>Developed API integrations between various network management systems</li>
-                    <li>Created custom dashboards for real-time network performance visualization</li>
-                    <li>Implemented security protocols and network optimization algorithms</li>
+                    <li>Developed a modular network simulation tool using Mininet, Node.js, and MongoDB, enabling users to emulate and test 10+ network topologies with variable traffic configurations.</li>
+                    <li>Reduced configuration-related errors by 30% by automating topology generation and real-time traffic evaluation in the simulator.</li>
+                    <li>Built a dynamic user interface with AngularJS for editing topology parameters, contributing to ~30% of the front-end feature set.</li>
+                    <li>Collaborated in an Agile development environment using Git, attending sprint meetings, conducting code reviews, and ensuring timely feature delivery aligned with user needs.</li>
                 </ul>
-                <p>Technologies used: Java, Python, JavaScript, Node.js, Network Protocols, RESTful APIs</p>
+                <p></p>
+                <p>Techstack used: Mininet, Node.js, MongoDB, AngularJS, Git, Agile Methodology.</p>
             `,
             'navigation': `
-                <h2>Autonomous Navigation System</h2>
-                <p>An advanced navigation algorithm for mobile robots operating in dynamic environments with obstacle avoidance.</p>
-                <h4>Key Features:</h4>
-                <ul>
-                    <li>Real-time path planning with dynamic obstacle avoidance</li>
-                    <li>Integration with multiple sensor types (LiDAR, camera, ultrasonic)</li>
-                    <li>Machine learning for environment classification and decision making</li>
-                    <li>Optimized for low computational resources</li>
-                </ul>
-                <p>This project demonstrated a 40% improvement in navigation efficiency compared to traditional pathfinding algorithms.</p>
-                <p>Technologies used: Python, ROS, TensorFlow, C++</p>
+                <h2>UAV Autonomous Landing & Color-Based Navigation</h2>
+                <p>I developed an autonomous navigation system for the Parrot Mambo Mini Drone using color-based line following and shape detection. The system enables the drone to autonomously take off, follow a colored line (in red, green, or blue), and detect a circular marker at the end of the line to initiate a controlled landing. Using MATLAB Simulink, real-time camera feedback, and improved HSV-based color detection, the drone continuously adjusts its movement to stay aligned with the path. The project successfully demonstrated the integration of computer vision for real-time image processing, motion correction, and autonomous decision-making, laying the foundation for more complex navigation tasks in aerial robotics.</p>
+                <p>Techstack used: OpenCV, Python, Gazebo, MATLAB.</p>
             `,
             'iot': `
-                <h2>IoT Monitoring Dashboard</h2>
-                <p>A comprehensive real-time monitoring system for industrial IoT sensors with advanced data visualization.</p>
-                <h4>Key Features:</h4>
-                <ul>
-                    <li>Real-time data collection from various sensor types</li>
-                    <li>Interactive dashboards with customizable widgets</li>
-                    <li>Anomaly detection and predictive maintenance alerts</li>
-                    <li>Historical data analysis and trend identification</li>
-                </ul>
-                <p>Implemented in three manufacturing facilities, resulting in a 25% reduction in equipment downtime.</p>
-                <p>Technologies used: JavaScript, Node.js, MQTT, React, MongoDB, D3.js</p>
+                <h2>Path Planning for Maze Solving with MyCobot Pro 600</h2>
+                <p>I developed an autonomous solution for solving a 4x4 maze using the MyCobot Pro 600 robotic arm. The maze image was captured using an AI Kit camera, processed to extract the solution path, and converted into waypoints that the robot could follow. The maze-solving algorithm relied on morphological operations and skeletonization to determine the shortest path. These waypoints were then transformed into robot coordinates using inverse kinematics, and the robotic arm autonomously navigated the maze with straight-line movements. The process involved validating the solution through a digital twin, ensuring accurate path planning, and executing the movements through TCP communication with the robot. The project successfully demonstrated autonomous maze solving with the MyCobot Pro 600, showcasing robust image processing and kinematic control techniques.</p>
+                <p>Techstack used: Python, OpenCV, MATLAB Simulink, ROS2, Inverse Kinematics.</p>
             `,
             'distributed': `
-                <h2>Distributed Computing Framework</h2>
-                <p>A lightweight framework for distributed computing tasks across multiple nodes with fault tolerance.</p>
-                <h4>Key Features:</h4>
-                <ul>
-                    <li>Task scheduling and distribution based on node availability and capacity</li>
-                    <li>Automatic recovery from node failures</li>
-                    <li>Data synchronization and conflict resolution</li>
-                    <li>Secure communication between nodes</li>
-                </ul>
-                <p>Used for processing large datasets in resource-constrained environments with 70% improvement in processing time.</p>
-                <p>Technologies used: Go, gRPC, Protocol Buffers, Docker</p>
-            `,
+                <h2>WhatsApp Group Chat Analysis</h2>
+                <p>This project leverages Python and a diverse set of libraries to analyze exported WhatsApp chat data. The tech stack includes Pandas for data manipulation and statistical analysis, NumPy for efficient numerical operations, regex for parsing message formats, and emoji for identifying and counting emoji usage. By extracting and processing messages, the tool provides comprehensive insights into chat activity, such as message counts, media, emoji usage, and shared links, all broken down by individual users. This versatile project highlights the power of Python for data parsing and exploratory analysis.</p>
+                <p>Techstack used: Python, Pandas, NumPy, regex.</p>
+                `,
             'project4': `
-                <h2>Project 4 Title</h2>
-                <p>Details about Project 4...</p>
-            `,
+                <h2>Task Management Application</h2>
+                <p>This application allows users to register, log in, and manage tasks (view, create, update, delete). The focus is on functionality, code clarity, and correctness.Only authenticated users can perform task operations.Password Hashing: Use bcrypt or another hashing library to store passwords securely.Token Verification: Verify the token (JWT) on each request to protected routes.The backend is implemented using Node.js/Express with TypeScript and PostgreSQL for data persistence, while the frontend is built with React and TypeScript.</p>
+                <p>Techstack used: Node.js, Express, PostgreSQL, TypeScript, React.</p>
+                `,
             'project5': `
-                <h2>Project 5 Title</h2>
-                <p>Details about Project 5...</p>
-            `,
+                <h2>Image Restoration of Natural Images</h2>
+                <p>In this project, I developed a solution to restore rain-degraded images using deep learning, enhancing applications like outdoor surveillance and autonomous vehicles. Leveraging MATLAB, PyTorch, and Python, I implemented a Multi-Stage Progressive Restoration Network (MPRNet) that combines CNNs with an encoder-decoder design. The model breaks restoration into progressive subtasks, uses supervised attention to refine features, and integrates multi-scale feature aggregation for high-quality outputs. This approach achieved state-of-the-art results on synthetic and real-world datasets for image deraining, deblurring, and denoising with computational efficiency.</p>
+                <p>Techstack used: PyTorch, CNN Encoder-Decoder Network, ORSNet.</p>
+                `,
+            'project6': `
+                <h2>Performance enhancement of underwater communication</h2>
+                <p>I developed a machine learning model in MATLAB to simulate light propagation in ocean waters, aiming to improve data rates and wireless capabilities for underwater Free Space Optical (FSO) links, addressing the bandwidth limitations of acoustic communication. Using NumPy and Simulink libraries, I built a simulation environment to model underwater optical channels, factoring in light scattering, absorption, and turbulence. The machine learning model optimized signal integrity and data recovery in challenging underwater conditions. This project showcased the potential of combining machine learning with optical communication to enable high-speed, reliable underwater data transfer for exploration, autonomous vehicles, and environmental monitoring.</p>
+                <p>Techstack used: PyTorch, MATLAB, NumPy.</p>
+                `,
             'fun-project3': `
-                <h2>Fun Project 3 Title</h2>
-                <p>Details about Fun Project 3...</p>
+                <h2>Open-Seq-Me</h2>
+                <p>In the PU Automations Hackathon, I worked on automating the sample sequencing process in laboratory environments, which traditionally requires manual intervention for repetitive tasks. Our solution aimed to improve speed, precision, and reliability by integrating robotics, particularly the Dobot Magician Lite. The process involved automating the handling, cutting, retrieval, and placement of products into the sequencer, as well as efficiently discarding waste. Key technologies included laser cutting, a vibrating metal sheet for casing separation, and the use of a conveyor belt system for product movement. I contributed to the development of Sequoia, an AI-powered assistant built with LangChain and GPT-4 Turbo, which guides engineers and stakeholders through the automation process. By optimizing the workflow with just one robot and leveraging environmental factors, we reduced hardware complexity and costs, creating a more efficient and scalable solution. The project provided real-world experience in rapid prototyping, automation, and problem-solving, pushing the team to think creatively and work collaboratively.</p>
+                <p>Techstack used: Dobot Magician Lite, AI, Python, Pydobot.</p>
             `,
             'fun-project4': `
-                <h2>Fun Project 4 Title</h2>
-                <p>Details about Fun Project 4...</p>
+                <h2>AeroChain</h2>
+                <p>In the AeroChain project, I worked as part of a team to address the inefficiencies in the aerospace supply chain. We developed a blockchain-based solution to streamline data management and provide centralized, real-time visibility into orders, shipments, and supplier performance. My contributions focused on leveraging AI-driven insights for demand prediction and proactive planning, while helping build features that enabled smart sourcing decisions and supported transparent, tamper-proof tracking of supply chain activities. I also helped integrate tools like an onboarding chatbot and a visual insight assistant, facilitating seamless interaction with the system. Our platform improved inventory management, reduced administrative costs, and fostered better supplier relationships. As part of the future development plan, I’m excited about incorporating digital twin simulations and sustainability features into the system for further optimization.</p>
+                <p>Techstack used: React.js, Smart Contracts, Blockchain.</p>
             `,
             'fun-project5': `
-                <h2>Fun Project 5 Title</h2>
-                <p>Details about Fun Project 5...</p>
-            `,
-            'ar-grocery': `
-                <h2>AR Grocery Shopping Experience</h2>
-                <p>A hackathon project that uses augmented reality to enhance the grocery shopping experience.</p>
-                <h4>Key Features:</h4>
-                <ul>
-                    <li>Product information overlay when scanning items with a smartphone camera</li>
-                    <li>Nutritional information visualization and dietary restriction filtering</li>
-                    <li>Recipe suggestions based on scanned products</li>
-                    <li>Price comparison with nearby stores</li>
-                </ul>
-                <p>Won first place at the 2023 TechInnovate Hackathon.</p>
-                <p>Technologies used: ARKit/ARCore, Unity, JavaScript, Node.js, MongoDB</p>
+                <h2>Endstar Game Development</h2>
+                <p>In the Endstar Game Maker Spark Challenge, the Team Educate! developed a game titled Sun Devil Hero: Saving President Crow. The game is designed to offer an engaging learning experience for freshmen at ASU, combining education with gaming in a fun and interactive environment. The story follows Agent Sparky, who must rescue President Crow within the game world. The game is built using Endstar, a platform focused on world-building and rapid application development (RAD), facilitating enterprise-level game development. Throughout the hackathon, the team leveraged AI and game design principles to create an immersive educational experience. The project demonstrated how games can be utilized for educational purposes while providing a valuable, hands-on experience with game development tools and platforms. The team learned key takeaways such as the ease of use and versatility of the Endstar platform, which supports both rapid development and deployment.</p>
+                <p>Techstack used: LUA scripting, AI, Decision Trees, UI/UX Design.</p>
             `,
             'news': `
-                <h2>Personalized News Aggregator</h2>
-                <p>A news aggregation application that uses machine learning to curate content based on user preferences.</p>
-                <h4>Key Features:</h4>
-                <ul>
-                    <li>Content filtering based on user reading habits and preferences</li>
-                    <li>Topic categorization and sentiment analysis</li>
-                    <li>Customizable reading interface with focus mode</li>
-                    <li>Offline reading capabilities and syncing across devices</li>
-                </ul>
-                <p>Developed as a weekend project during a machine learning bootcamp.</p>
-                <p>Technologies used: Python, Flask, React, Natural Language Processing, TensorFlow</p>
+                <h2>Food Sage: OCR</h2>
+                <p>This project WON! a hackathon organized by Voxel51, focusing on Visual AI. This project focuses on identifying and extracting the ingredients section from processed food packaging. The extracted ingredients are then categorized into three levels of potential harmfulness. By leveraging computer vision and optical character recognition (OCR) techniques, the system analyzes the ingredient lists and assesses their relative health impact.</p>
+                <p>Techstack used: Python, OCR, Pytesseract.</p>
             `
         };
         

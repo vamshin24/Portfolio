@@ -412,8 +412,10 @@ a:hover {
 }
 
 .card-logo img {
-    max-height: 80px;
-    max-width: 80%;
+    width: 100%; /* Make the image take up the full width of the container */
+    height: 100%; /* Make the image take up the full height of the container */
+    /* Ensures the image covers the container without distortion */
+    border-radius: 8px;
 }
 
 .card-number {
@@ -435,6 +437,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    min-height: 200px; /* Ensures a minimum height for consistency */
+    box-sizing: border-box;
 }
 
 .card-content h4 {
