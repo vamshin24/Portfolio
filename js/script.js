@@ -3,8 +3,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get references to important elements
     const scrollArrow = document.querySelector('.bounce-arrow');
     const workSection = document.getElementById('work-section');
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navbarLinks = document.querySelector('.navbar-links');
     const darkModeToggle = document.querySelector('.dark-mode-toggle');
     const icon = darkModeToggle.querySelector('i');
+
+    // Toggle navbar links visibility
+    hamburgerMenu.addEventListener('click', function() {
+        navbarLinks.classList.toggle('active');
+    });
     // Check for saved dark mode preference
     const savedMode = localStorage.getItem('darkMode');
     if (savedMode === 'enabled') {
