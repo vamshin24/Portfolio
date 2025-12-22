@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
@@ -24,7 +27,7 @@
                 <i class="fas fa-moon"></i>
             </div>
             <a href="#work-section">Work</a>
-            <a href="about.html">About</a>
+            <a href="about.html">About Me</a>
             <a href="images/VamshiNarayanaBabu_Resume.pdf" target="_blank">Resume</a>
             <a href="mailto:vamshin24@asu.edu">Let's Connect</a>
         </div>
@@ -32,32 +35,92 @@
 
 
     <!-- Home/Landing Page (Page 1) -->
+    <!-- Home/Landing Page (Page 1) -->
     <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-quote">👋 Hi there, I'm Vamshi</h1>
-            <p class="hero-subtext">A robotics wizard and software enthusiast who brings machines to life and makes them smarter, faster, and cooler. Whether it's automating everyday tasks or building advanced AI systems, I focus on creating solutions that not only enhance efficiency but also push the limits of what's possible.</p>
-            <div class="contact-box">
-                <h3>Contact Me</h3>
-                <div class="social-icons">
-                    <a href="mailto:vamshin24@asu.edu"><i class="fas fa-envelope"></i></a>
-                    <a href="https://linkedin.com/in/vamshin24" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/vamshin24" target="_blank"><i class="fab fa-github"></i></a>
+        <div class="hero-container">
+            <div class="hero-content">
+
+                <h1 class="hero-quote">👋 Hi there, I'm <span class="highlight">Vamshi</span></h1>
+                <h2 class="hero-title">Robotics Wizard &<br>Software Enthusiast</h2>
+                <p class="hero-subtext">Bringing machines to life and making them smarter, faster, and cooler.
+                    From upgrading everyday automation to building advanced AI systems, I push the limits of what's
+                    possible.</p>
+
+                <div class="hero-cta">
+                    <a href="images/VamshiNarayanaBabu_Resume.pdf" class="btn btn-primary" download>Download Resume</a>
+                    <a href="about.html" class="btn btn-outline arrow-link">
+                        About Me
+                        <i class="fas fa-arrow-right jumping-arrow"></i>
+                    </a>
+                </div>
+
+                <div class="social-icons hero-socials">
+                    <a href="mailto:vamshin24@asu.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/vamshin24" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/vamshin24" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
                 </div>
             </div>
-        </div>
-        
-        <div class="robot-animation">
-            <!-- Placeholder for robot animation -->
-            <div class="robot-placeholder">
-                <div class="robot">
-                    <div class="robot-head"></div>
-                    <div class="robot-body"></div>
-                    <div class="robot-arm arm-left"></div>
-                    <div class="robot-arm arm-right"></div>
-                </div>
+
+            <div class="hero-visual">
+                <!-- Floating Skill Clouds -->
+                <div class="skill-cloud" style="top: 10%; left: 0%; animation-delay: 0s;">Robotics</div>
+                <div class="skill-cloud" style="top: 15%; right: 0%; animation-delay: 1.5s;">Springboot</div>
+                <div class="skill-cloud" style="bottom: 20%; left: -5%; animation-delay: 0.8s;">Python</div>
+                <div class="skill-cloud" style="bottom: 15%; right: -5%; animation-delay: 2.2s;">ROS2</div>
+                <div class="skill-cloud" style="top: 45%; left: -10%; animation-delay: 1.2s;">Computer Vision</div>
+                <div class="skill-cloud" style="top: 50%; right: -10%; animation-delay: 2.5s;">AI</div>
+                <div class="skill-cloud" style="top: -5%; left: 40%; animation-delay: 0.5s;">Java</div>
+                <svg class="robot-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    aria-labelledby="robotTitle" role="img">
+                    <title id="robotTitle">A friendly robot waving hello</title>
+                    <!-- Shadow -->
+                    <ellipse cx="200" cy="380" rx="80" ry="10" fill="rgba(0,0,0,0.1)" class="robot-shadow" />
+
+                    <!-- Group for floating animation -->
+                    <g class="robot-body-group">
+                        <!-- Antenna -->
+                        <line x1="200" y1="90" x2="200" y2="60" stroke="#4b4646" stroke-width="4" />
+                        <circle cx="200" cy="55" r="8" fill="#F05454" class="robot-antenna-light" />
+
+                        <!-- Head -->
+                        <rect x="140" y="90" width="120" height="90" rx="20" fill="#f8f9fa" stroke="#4b4646"
+                            stroke-width="4" />
+                        <!-- Face Screen -->
+                        <rect x="155" y="110" width="90" height="50" rx="10" fill="#4b4646" />
+                        <!-- Eyes -->
+                        <g class="robot-eyes">
+                            <circle cx="180" cy="135" r="8" fill="#8bffe8" />
+                            <circle cx="220" cy="135" r="8" fill="#8bffe8" />
+                        </g>
+
+                        <!-- Body -->
+                        <path
+                            d="M 150 190 L 250 190 L 260 320 C 260 340 240 350 200 350 C 160 350 140 340 140 320 L 150 190 Z"
+                            fill="#f8f9fa" stroke="#4b4646" stroke-width="4" />
+                        <!-- Chest Detail -->
+                        <rect x="180" y="220" width="40" height="60" rx="5" fill="#e6e6e6" />
+                        <circle cx="200" cy="240" r="12" fill="#8bffe8b8" />
+
+                        <!-- Arms -->
+                        <!-- Left Arm (Static) -->
+                        <path d="M 150 210 Q 120 230 130 270" stroke="#4b4646" stroke-width="12" stroke-linecap="round"
+                            fill="none" />
+                        <circle cx="130" cy="270" r="10" fill="#4b4646" />
+
+                        <!-- Right Arm (High Waving) -->
+                        <g class="robot-arm-wave" style="transform-origin: 250px 210px;">
+                            <!-- Raised Arm Path -->
+                            <path d="M 250 210 Q 280 180 300 150" stroke="#4b4646" stroke-width="12"
+                                stroke-linecap="round" fill="none" />
+                            <circle cx="300" cy="150" r="10" fill="#4b4646" />
+                        </g>
+                    </g>
+                </svg>
             </div>
         </div>
-        
+
         <div class="scroll-indicator">
             <p>Dive In</p>
             <div class="bounce-arrow">
@@ -69,247 +132,971 @@
     <!-- Work & Projects (Page 3) -->
     <section id="work-section" class="work-section fade-up">
         <div class="container">
-            <h2>My Work</h2>
-            
+            <h2 class="section-title text-center">My Work</h2>
+
             <!-- Work Experience Cards -->
-            <div class="section-heading animate">
+            <div class="section-heading animate"
+                style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
                 <h3>Work Experience</h3>
+                <a href="#projects-section" class="btn-text"
+                    style="font-size: 1rem; text-decoration: none; color: var(--secondary-color); font-weight: 500;">
+                    Jump to Projects <i class="fas fa-arrow-down"></i>
+                </a>
             </div>
-            
+
             <div class="cards-container featured-cards">
-                <div class="card work-card animate stagger-delay-1">
-                    <div class="card-inner">
-                        <div class="card-logo">
-                            <img src="images/addverb.png" alt="Addverb">
+                <!-- 1. Robotics Software Engineer Volunteer (Formerly Recent Experience) -->
+                <article class="card work-card animate stagger-delay-1">
+                    <div class="card-media-carousel">
+                        <div class="media-item active">
+                            <video src="assets/Autonomous%20grocery%20stocking%20robot.mp4" muted playsinline></video>
                         </div>
-                        <div class="card-content">
+                        <div class="media-item">
+                            <img src="images/WhatsApp%20Image%202025-12-19%20at%2002.58.29.jpeg"
+                                alt="Stealth Startup Image 1" loading="lazy">
+                        </div>
+                        <div class="media-item">
+                            <img src="images/WhatsApp%20Image%202025-12-19%20at%2002.58.30.jpeg"
+                                alt="Stealth Startup Image 2" loading="lazy">
+                        </div>
+
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Robotics Software Engineer Volunteer</h4>
+                            <span class="role-tag">Stealth Startup</span>
+                        </div>
+                        <p class="card-desc">Working on scalable web applications and optimizing backend services for
+                            high-performance systems.</p>
+                        <div class="card-tags">
+                            <span>Web Dev</span>
+                            <span>Backend</span>
+                            <span>Scalability</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-text read-more" aria-label="Details about Stealth Startup">More Details
+                                <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-hidden-details" hidden>
+                        <h2>Stealth Startup</h2>
+                        <h4>Robotics Software Engineer Volunteer | Jun 2025 - Aug 2025</h4>
+                        <p>Built a network simulation platform and interactive UI to support custom topology testing and
+                            performance analysis. Focused on backend logic, real-time simulation, and frontend
+                            improvements using Mininet, Node.js, MongoDB, and AngularJS.</p>
+                        <ul>
+                            <li>Developed a modular network simulation tool using Mininet, Node.js, and MongoDB,
+                                enabling users to emulate and test 10+ network topologies with variable traffic
+                                configurations.</li>
+                            <li>Reduced configuration-related errors by 30% by automating topology generation and
+                                real-time traffic evaluation in the simulator.</li>
+                            <li>Built a dynamic user interface with AngularJS for editing topology parameters,
+                                contributing to ~30% of the front-end feature set.</li>
+                            <li>Collaborated in an Agile development environment using Git, attending sprint meetings,
+                                conducting code reviews, and ensuring timely feature delivery aligned with user needs.
+                            </li>
+                        </ul>
+                        <p>Techstack used: Mininet, Node.js, MongoDB, AngularJS, Git, Agile Methodology.</p>
+                    </div>
+                </article>
+
+                <!-- 2. Addverb Technologies -->
+                <article class="card work-card animate stagger-delay-2">
+                    <div class="card-media-carousel">
+                        <div class="media-item active">
+                            <img src="images/addverb.png" alt="Addverb Technologies Logo" loading="lazy"
+                                style="object-fit: contain; padding: 20px; background: #fff;">
+                        </div>
+                        <div class="media-item">
+                            <video src="assets/addverb.mp4" muted playsinline></video>
+                        </div>
+                        <div class="media-item">
+                            <img src="images/addverb1.jpeg" alt="Addverb Work" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
                             <h4>Addverb Technologies</h4>
-                            <p class="card-role">Robotics Software Engineer</p>
-                            <p>Developed automation solutions and robotic systems for warehousing and logistics.</p>
+                            <span class="role-tag">Robotics Software Engineer</span>
                         </div>
-                        <div class="card-overlay">
-                            <button class="read-more" data-id="addverb">Read More</button>
+                        <p class="card-desc">Developed automation solutions and robotic systems for warehousing and
+                            logistics. Optimized backend services and real-time fleet management.</p>
+                        <div class="card-tags">
+                            <span>Robotics</span>
+                            <span>Java</span>
+                            <span>Python</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-text read-more" aria-label="Details about Addverb">More Details <i
+                                    class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
-                </div>
-                
-                <div class="card work-card animate stagger-delay-2">
-                    <div class="card-inner">
-                        <div class="card-logo">
-                            <img src="images/openNets.png" alt="OpenNets">
+                    <div class="card-hidden-details" hidden>
+                        <h2>Addverb Technologies</h2>
+                        <h4>Robotics Software Engineer | 2022 - 2024</h4>
+                        <p>Worked on full-stack development and systems engineering for warehouse robotics, focusing on
+                            automation, real-time coordination, and backend optimization using Java, Python, and
+                            messaging systems like Kafka and Redis. Delivered scalable solutions that enhanced
+                            performance, reliability, and throughput in real-world industrial environments.</p>
+                        <ul>
+                            <li>Designed and deployed a DWS (Dimensioning, Weighing, Scanning) system with microservices
+                                architecture and REST APIs, improving inbound logistics automation by 80%.</li>
+                            <li>Enhanced robotic communication reliability by implementing TCP/IP socket communication
+                                and PLC programming, reducing signal transmission latency by 20%.</li>
+                            <li>Refactored warehouse control system (WCS) scheduling logic in Python (Django), resolving
+                                70+ bugs and improving storage efficiency by 35%.</li>
+                            <li>Optimized inter-system messaging using Redis, Kafka, and RabbitMQ to increase real-time
+                                coordination between robotic subsystems (Zippy and SortIE) by 15%.</li>
+                            <li>Led the architecture for an inbound palletization system using Spring Boot and Maven,
+                                boosting throughput and warehouse efficiency by 40%.</li>
+                        </ul>
+                        <p>Techstack used: Java, Spring Boot, MSSQL, Redis, Kafka, RabbitMQ, Python, Django, TCP/IP, PLC
+                            Programming.</p>
+                    </div>
+                </article>
+
+                <!-- 3. Research Volunteer at GHOST Labs (Moved from Fun Projects) -->
+                <article class="card work-card animate stagger-delay-3">
+                    <div class="card-media-carousel">
+                        <div class="media-item active">
+                            <img src="images/ghostLabs.png" alt="AR Grocery" loading="lazy">
                         </div>
-                        <div class="card-content">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Research Volunteer - GHOST Labs</h4>
+                            <span class="role-tag">ASU GHOST Labs</span>
+                        </div>
+                        <p class="card-desc">AR project to enhance the grocery shopping experience.</p>
+                        <div class="card-tags">
+                            <span>Augmented Reality</span>
+                            <span>Unity</span>
+                            <span>Research</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-text read-more" aria-label="Details about GHOST Labs">More Details <i
+                                    class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-hidden-details" hidden>
+                        <h2>ASU GHOST Labs</h2>
+                        <h4>Research Volunteer</h4>
+                        <p>AR project to enhance the grocery shopping experience using Augmented Reality headsets.</p>
+                        <ul>
+                            <li>Developed AR interaction models in Unity and C#.</li>
+                            <li>Integrated computer vision for product recognition and information overlay.</li>
+                            <li>Conducted user studies to validate usability improvements in retail environments.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- 4. OpenNets -->
+                <article class="card work-card animate stagger-delay-4">
+                    <div class="card-media-carousel">
+                        <div class="media-item active">
+                            <img src="images/openNets.png" alt="OpenNets Work" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
                             <h4>OpenNets</h4>
-                            <p class="card-role">Full Stack Developer Intern</p>
-                            <p>Built network infrastructure solutions and communication systems for enterprise clients.</p>
+                            <span class="role-tag">Full Stack Developer Intern</span>
                         </div>
-                        <div class="card-overlay">
-                            <button class="read-more" data-id="opennets">Read More</button>
+                        <p class="card-desc">Built network infrastructure solutions and communication systems for
+                            enterprise clients.</p>
+                        <div class="card-tags">
+                            <span>Full Stack</span>
+                            <span>Networks</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-text read-more" aria-label="Details about OpenNets">More Details <i
+                                    class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
-                </div>
+                    <div class="card-hidden-details" hidden>
+                        <h2>OpenNets</h2>
+                        <h4>Full Stack Developer Intern| May 2021 - July 2021</h4>
+                        <p>Built a network simulation platform and interactive UI to support custom topology testing and
+                            performance analysis. Focused on backend logic, real-time simulation, and frontend
+                            improvements using Mininet, Node.js, MongoDB, and AngularJS.</p>
+                        <ul>
+                            <li>Developed a modular network simulation tool using Mininet, Node.js, and MongoDB,
+                                enabling users to emulate and test 10+ network topologies with variable traffic
+                                configurations.</li>
+                            <li>Reduced configuration-related errors by 30% by automating topology generation and
+                                real-time traffic evaluation in the simulator.</li>
+                            <li>Built a dynamic user interface with AngularJS for editing topology parameters,
+                                contributing to ~30% of the front-end feature set.</li>
+                            <li>Collaborated in an Agile development environment using Git, attending sprint meetings,
+                                conducting code reviews, and ensuring timely feature delivery aligned with user needs.
+                            </li>
+                        </ul>
+                        <p>Techstack used: Mininet, Node.js, MongoDB, AngularJS, Git, Agile Methodology.</p>
+                    </div>
+                </article>
             </div>
+
+            <!-- Skills Section (Moved) -->
+            <div id="skills" class="section-heading animate">
+                <h3><i class="fas fa-tools"></i> Skills</h3>
+            </div>
+
+            <div class="cards-container skills-grid">
+                <!-- 1. Programming Languages -->
+                <article class="card skill-card animate">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Programming Languages</h4>
+                        </div>
+                        <div class="card-tags">
+                            <span>Python</span><span>Java</span><span>MATLAB</span><span>SQL</span>
+                            <span>JavaScript</span><span>TypeScript</span><span>Bash</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. Robotics & Autonomous Systems -->
+                <article class="card skill-card animate">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Robotics & Autonomous Systems</h4>
+                        </div>
+                        <div class="card-tags">
+                            <span>ROS / ROS2</span><span>Nav2</span><span>MoveIt</span><span>RViz</span>
+                            <span>SLAM</span><span>Cartographer</span><span>PID Controller</span>
+                            <span>Sensor Integration</span><span>ArUco Markers</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Simulation & Digital Twins -->
+                <article class="card skill-card animate">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Simulation & Digital Twins</h4>
+                        </div>
+                        <div class="card-tags">
+                            <span>Gazebo</span><span>MuJoCo</span><span>HIL Simulation</span><span>Pydobot</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. AI, Computer Vision & NLP -->
+                <article class="card skill-card animate">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>AI, Computer Vision & NLP</h4>
+                        </div>
+                        <div class="card-tags">
+                            <span>scikit-learn</span><span>PyTorch</span><span>TensorFlow</span><span>Keras</span>
+                            <span>Hugging Face</span><span>Transformers</span><span>FashionCLIP</span>
+                            <span>OpenCV</span><span>PyTesseract (OCR)</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. Backend Development & APIs -->
+                <article class="card skill-card animate">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Backend Development & APIs</h4>
+                        </div>
+                        <div class="card-tags">
+                            <span>Django</span><span>Spring Boot</span><span>Hibernate</span><span>REST APIs</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6. Messaging, Streaming & Caching -->
+                <article class="card skill-card animate">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Messaging, Streaming & Caching</h4>
+                        </div>
+                        <div class="card-tags">
+                            <span>Kafka</span><span>RabbitMQ</span><span>Redis</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 7. Databases -->
+                <article class="card skill-card animate">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Databases</h4>
+                        </div>
+                        <div class="card-tags">
+                            <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 8. Cloud, DevOps & Containers -->
+                <article class="card skill-card animate">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Cloud, DevOps & Containers</h4>
+                        </div>
+                        <div class="card-tags">
+                            <span>AWS</span><span>Azure</span><span>Docker</span><span>Kubernetes</span>
+                            <span>CI/CD</span><span>Jenkins</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 9. Developer Tools -->
+                <article class="card skill-card animate">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Developer Tools</h4>
+                        </div>
+                        <div class="card-tags">
+                            <span>Git</span><span>GitHub</span><span>Postman</span><span>DBeaver</span>
+                            <span>Multi-threading</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 10. Frontend & UI -->
+                <article class="card skill-card animate">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Frontend & UI</h4>
+                        </div>
+                        <div class="card-tags">
+                            <span>React</span><span>Next.js</span><span>Tailwind CSS</span>
+                            <span>Framer Motion</span><span>Streamlit</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
             <!-- Projects Section -->
-<div class="section-heading">
-    <h3>Projects</h3>
-</div>
+            <div id="projects-section" class="section-heading animate" style="scroll-margin-top: 100px;">
+                <h3>Projects</h3>
+            </div>
 
-<div class="cards-container featured-cards">
-    <!-- Project 1 -->
-    <div class="card project-card">
-        <div class="card-inner">
-            <div class="card-preview">
-                <img src="images/drone.png" alt="Autonomous UAV Navigation">
-            </div>
-            <div class="card-content">
-                <div class="card-number">01</div>
-                <h4>Autonomous UAV Navigation and Control</h4>
-                <p>Designed a motor mixing algorithm to improve UAV landing precision and dynamic path optimization using computer vision and MATLAB.</p>
-            </div>
-            <div class="card-overlay">
-                <button class="read-more" data-id="navigation">Read More</button>
-            </div>
-        </div>
-    </div>
+            <div class="cards-container project-cards-grid">
+                <!-- 1. Foldable Grasshopper-Inspired Walking Robot [NEW] -->
+                <article class="card project-card animate">
+                    <div class="card-media-carousel">
+                        <div class="media-item active">
+                            <video src="assets/walkingDemo.mp4" muted playsinline></video>
+                        </div>
+                        <div class="media-item">
+                            <video src="assets/mujoco.mp4" muted playsinline></video>
+                        </div>
+                        <div class="media-item">
+                            <img src="images/prototype%20copy.jpeg" alt="Grasshopper Prototype" loading="lazy">
+                        </div>
+                        <div class="media-item">
+                            <img src="images/leg%20copy.jpeg" alt="Grasshopper Leg Design" loading="lazy">
+                        </div>
+                        <div class="media-item">
+                            <img src="images/ss3%20copy.png" alt="Grasshopper Simulation" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Foldable Grasshopper Robot</h4>
+                        </div>
+                        <p class="card-desc">Design and fabrication of a bio-inspired foldable walking robot.</p>
+                        <div class="card-tags">
+                            <span>Robotics</span>
+                            <span>Bio-inspired</span>
+                            <span>Design</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-text read-more" aria-label="Details about Grasshopper Robot">View Project
+                                <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-hidden-details" hidden>
+                        <h2>Foldable Grasshopper-Inspired Walking Robot</h2>
+                        <h4>Robotics Project</h4>
+                        <p>Developed a bio-inspired walking robot mechanism mimicking the kinematics of a grasshopper.
+                        </p>
+                        <ul>
+                            <li>Designed foldable leg mechanisms for compact storage and deployment.</li>
+                            <li>Analyzed kinematics and dynamics for stable walking gaits.</li>
+                            <li>Prototyped using 3D printing and laser cutting techniques.</li>
+                        </ul>
+                    </div>
+                </article>
 
-    <!-- Project 2 -->
-    <div class="card project-card">
-        <div class="card-inner">
-            <div class="card-preview">
-                <img src="images/cobotArm.png" alt="Path Planning with MyCobot Pro 600">
-            </div>
-            <div class="card-content">
-                <div class="card-number">02</div>
-                <h4>Navigating the Maze: Path Planning with MyCobot Pro 600</h4>
-                <p>Programmed the MyCobot Pro 600 for intelligent maze navigation, integrating path planning and real-time decision-making capabilities.</p>
-            </div>
-            <div class="card-overlay">
-                <button class="read-more" data-id="iot">Read More</button>
-            </div>
-        </div>
-    </div>
+                <!-- 2. Recommendation Algorithm for Clothing [NEW] -->
+                <article class="card project-card animate">
+                    <div class="card-media-carousel">
+                        <div class="media-item active">
+                            <img src="images/clothes.png" alt="Clothing Rec 1" loading="lazy">
+                        </div>
+                        <div class="media-item">
+                            <img src="images/clothes1.png" alt="Clothing Rec 2" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Swipte To Shop Fashion PWA</h4>
+                        </div>
+                        <p class="card-desc">AI-powered recommendation engine for personalized clothing suggestions.</p>
+                        <div class="card-tags">
+                            <span>Machine Learning</span>
+                            <span>Python</span>
+                            <span>AI</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-text read-more" aria-label="Details about Recommendation Algo">View
+                                Project <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-hidden-details" hidden>
+                        <h2>Recommendation Algorithm for Clothing</h2>
+                        <h4>ML Project</h4>
+                        <p>Built a recommendation system to suggest clothing items based on user preferences and trends.
+                        </p>
+                        <ul>
+                            <li>Implemented collaborative filtering and content-based filtering algorithms.</li>
+                            <li>Processed large datasets of fashion items and user interactions.</li>
+                            <li>Improved recommendation accuracy using hybrid approaches.</li>
+                        </ul>
+                    </div>
+                </article>
 
-    <!-- Project 3 -->
-    <div class="card project-card">
-        <div class="card-inner">
-            <div class="card-preview">
-                <img src="images/whatsapp.png" alt="Chat Insights">
-            </div>
-            <div class="card-content">
-                <div class="card-number">03</div>
-                <h4>Chat Insights: Analyzing WhatsApp Group Conversations</h4>
-                <p>Analyzed over 10,000 messages to extract insights on message counts, media usage, and link frequencies.</p>
-            </div>
-            <div class="card-overlay">
-                <button class="read-more" data-id="distributed">Read More</button>
-            </div>
-        </div>
-    </div>
+                <!-- 3. UAV Navigation & Control [Existing] -->
+                <article class="card project-card animate">
+                    <div class="card-media-carousel">
+                        <div class="media-item active">
+                            <video src="assets/uav3.mp4" muted playsinline></video>
+                        </div>
+                        <div class="media-item">
+                            <video src="assets/uav1.mp4" muted playsinline></video>
+                        </div>
+                        <div class="media-item">
+                            <img src="images/drone.png" alt="UAV Navigation" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>UAV Navigation & Control</h4>
+                        </div>
+                        <p class="card-desc">Implemented autonomous landing precision and dynamic path optimization
+                            algorithms.</p>
+                        <div class="card-tags">
+                            <span>UAV</span>
+                            <span>Control Theory</span>
+                            <span>MATLAB</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-text read-more" aria-label="Details about Navigation">View Project <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <a href="https://github.com/vamshin24" target="_blank" class="icon-link"
+                                aria-label="GitHub Repo"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-hidden-details" hidden>
+                        <h4>UAV Navigation & Control</h4>
+                        <p>Developed control algorithms for precise UAV maneuvering.</p>
+                        <ul>
+                            <li>Implemented PID controllers for altitude and attitude stabilization.</li>
+                            <li>Designed path planning algorithms for obstacle avoidance.</li>
+                            <li>Simulated flight dynamics in MATLAB/Simulink.</li>
+                        </ul>
+                    </div>
+                </article>
 
-    <!-- Project 4 -->
-    <div class="card project-card">
-        <div class="card-inner">
-            <div class="card-preview">
-                <img src="images/task_manager.png" alt="TaskMaster">
-            </div>
-            <div class="card-content">
-                <div class="card-number">04</div>
-                <h4>TaskMaster: Organizing My Work, One Task at a Time</h4>
-                <p>Built a personalized task management app featuring real-time updates and role-based access for better workflow efficiency.</p>
-            </div>
-            <div class="card-overlay">
-                <button class="read-more" data-id="project4">Read More</button>
-            </div>
-        </div>
-    </div>
+                <!-- 4. Co-ordinated Frontier sim with multi robot [NEW] -->
+                <article class="card project-card animate">
+                    <div class="card-media-carousel">
+                        <div class="media-item active">
+                            <video src="assets/2robots.mp4" muted playsinline></video>
+                        </div>
+                        <div class="media-item">
+                            <video src="assets/3robots.mp4" muted playsinline></video>
+                        </div>
+                        <div class="media-item">
+                            <video src="assets/4robots.mp4" muted playsinline></video>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Multi-Robot Frontier Sim</h4>
+                        </div>
+                        <p class="card-desc">Simulation of coordinated multi-robot exploration and consensus.</p>
+                        <div class="card-tags">
+                            <span>ROS2</span>
+                            <span>Swarm Robotics</span>
+                            <span>Simulation</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-text read-more" aria-label="Details about Frontier Sim">View Project <i
+                                    class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-hidden-details" hidden>
+                        <h2>Co-ordinated Frontier Sim</h2>
+                        <h4>Robotics Simulation</h4>
+                        <p>Simulated a multi-robot system for autonomous exploration of unknown environments.</p>
+                        <ul>
+                            <li>Implemented frontier-based exploration algorithms.</li>
+                            <li>Developed consensus protocols for task allocation among robots.</li>
+                            <li>Visualized robot coordination and map merging in real-time.</li>
+                        </ul>
+                    </div>
+                </article>
 
-    <!-- Project 5 -->
-    <div class="card project-card">
-        <div class="card-inner">
-            <div class="card-preview">
-                <img src="images/imageRestoration.png" alt="Image restoration">
-            </div>
-            <div class="card-content">
-                <div class="card-number">05</div>
-                <h4>Image Restoration of Natural Images: Bringing Life Back to Rain-Damaged Images</h4>
-                <p>Implemented a CNN-based model to restore rain-affected images, enhancing texture preservation and restoration accuracy.</p>
-            </div>
-            <div class="card-overlay">
-                <button class="read-more" data-id="project5">Read More</button>
-            </div>
-        </div>
-    </div>
+                <!-- 5. Autonomous SLAM & Teleop [Existing] -->
+                <article class="card project-card animate">
+                    <div class="card-media-carousel">
+                        <div class="media-item active">
+                            <video src="assets/SLAM.mp4" muted playsinline></video>
+                        </div>
+                        <div class="media-item">
+                            <video src="assets/turtlebot3nav.mp4" muted playsinline></video>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Autonomous SLAM & Teleop</h4>
+                        </div>
+                        <p class="card-desc">Designed a motor mixing algorithm to improve UAV landing precision and
+                            dynamic path optimization using computer vision.</p>
+                        <div class="card-tags">
+                            <span>ROS2</span>
+                            <span>SLAM</span>
+                            <span>MATLAB</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-text read-more" aria-label="Details about Turtlebot3">View Project <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <a href="https://github.com/vamshin24" target="_blank" class="icon-link"
+                                aria-label="GitHub Repo"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-hidden-details" hidden>
+                        <h2>Autonomous SLAM & Teleop</h2>
+                        <h4>Robotics Project</h4>
+                        <p>Designed a motor mixing algorithm to improve UAV landing precision and dynamic path
+                            optimization using computer vision.</p>
+                        <ul>
+                            <li>Developed a mathematical model for quadcopter dynamics and simulated it in
+                                MATLAB/Simulink.</li>
+                            <li>Implemented PID control for stable hovering and waypoint navigation.</li>
+                            <li>Integrated SLAM (Simultaneous Localization and Mapping) using Lidar data for autonomous
+                                navigation in unknown environments.</li>
+                        </ul>
+                    </div>
+                </article>
 
-    <!-- Project 6 -->
-    <div class="card project-card">
-        <div class="card-inner">
-            <div class="card-preview">
-                <img src="images/UWOC.png" alt="underwater communication">
-            </div>
-            <div class="card-content">
-                <div class="card-number">06</div>
-                <h4>Performance enhancement of underwater communication</h4>
-                <p>Created a deep learning model that improved classification accuracy and signal processing efficiency for underwater communication.</p>
-            </div>
-            <div class="card-overlay">
-                <button class="read-more" data-id="project6">Read More</button>
-            </div>
-        </div>
-    </div>
-</div>
+                <!-- 6. Maze Path Planning (MyCobot) [Existing] -->
+                <article class="card project-card animate">
+                    <div class="card-media-carousel">
+                        <div class="media-item active">
+                            <video src="assets/mycobot.mp4" muted playsinline></video>
+                        </div>
+                        <div class="media-item">
+                            <img src="images/cobotArm.png" alt="MyCobot Arm" loading="lazy">
+                        </div>
+                        <div class="media-item">
+                            <video src="assets/digital_twin.mp4" muted playsinline></video>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Maze Path Planning</h4>
+                        </div>
+                        <p class="card-desc">Programmed MyCobot Pro 600 for intelligent maze navigation using real-time
+                            decision making.</p>
+                        <div class="card-tags">
+                            <span>Path Planning</span>
+                            <span>Robotics</span>
+                            <span>Python</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-text read-more" aria-label="Details about MyCobot">View Project <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <a href="https://github.com/vamshin24" target="_blank" class="icon-link"
+                                aria-label="GitHub Repo"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-hidden-details" hidden>
+                        <h4>Maze Path Planning</h4>
+                        <p>Robotic arm manipulation for solving maze puzzles.</p>
+                        <ul>
+                            <li>Used computer vision to detect maze and start/end points.</li>
+                            <li>Implemented A* algorithm for shortest path finding.</li>
+                            <li>Controlled 6-DOF robotic arm via Python API.</li>
+                        </ul>
+                    </div>
+                </article>
 
-<!-- Fun Projects Section -->
-<div class="section-heading">
-    <h3>Fun-Time Projects</h3>
-</div>
+                <!-- 7. Senti Chat [NEW] -->
+                <article class="card project-card animate">
+                    <div class="card-media-carousel">
+                        <div class="media-item active">
+                            <img src="images/senti2.png" alt="Senti Chat 1" loading="lazy">
+                        </div>
+                        <div class="media-item">
+                            <img src="images/sentiChat.png" alt="Senti Chat 2" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Senti Chat</h4>
+                        </div>
+                        <p class="card-desc">Real-time sentiment analysis chat application.</p>
+                        <div class="card-tags">
+                            <span>NLP</span>
+                            <span>WebSockets</span>
+                            <span>AI</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-text read-more" aria-label="Details about Senti Chat">View Project <i
+                                    class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-hidden-details" hidden>
+                        <h2>Senti Chat</h2>
+                        <h4>Real-Time Sentiment Analysis</h4>
+                        <p>A chat application that analyzes sentiment of messages in real-time.</p>
+                        <ul>
+                            <li>Integrated NLP models to classify message sentiment (positive, negative, neutral).</li>
+                            <li>Implemented real-time communication using WebSockets.</li>
+                            <li>Visualized conversation sentiment trends for users.</li>
+                        </ul>
+                    </div>
+                </article>
 
-<div class="cards-container featured-cards">
-    <!-- Fun Project 1 -->
-    <div class="card fun-card">
-        <div class="card-inner">
-            <div class="card-preview">
-                <img src="images/ghostLabs.png" alt="GHOST Labs">
-            </div>
-            <div class="card-content">
-                <div class="card-number">01</div>
-                <h4>Research Volunteer at ASU GHOST Labs</h4>
-                <p>Hackathon project that uses augmented reality to enhance the grocery shopping experience.</p>
-            </div>
-            <div class="card-overlay">
-                <button class="read-more" data-id="ar-grocery">Read More</button>
-            </div>
-        </div>
-    </div>
+                <!-- 8. Chat Insights [Existing] -->
+                <article class="card project-card animate">
+                    <div class="card-media-carousel">
+                        <div class="media-item active">
+                            <img src="images/chatAnalysis.png" alt="Chat Analysis 1" loading="lazy">
+                        </div>
+                        <div class="media-item">
+                            <img src="images/whatsapp.png" alt="Chat Analysis 2" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Chat Analysis</h4>
+                        </div>
+                        <p class="card-desc">Analyzed over 10,000 messages to extract insights on message counts and
+                            media usage.</p>
+                        <div class="card-tags">
+                            <span>Data Analysis</span>
+                            <span>Python</span>
+                            <span>Streamlit</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-text read-more" aria-label="Details about Chat Insights">View Project <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <a href="https://github.com/vamshin24" target="_blank" class="icon-link"
+                                aria-label="GitHub Repo"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-hidden-details" hidden>
+                        <h4>Chat Analysis</h4>
+                        <p>Data analysis tool for WhatsApp chat logs.</p>
+                        <ul>
+                            <li>Parsed and cleaned large text datasets using Pandas.</li>
+                            <li>Generated visualizations using Matplotlib and Seaborn.</li>
+                            <li>Deployed as a Streamlit web application.</li>
+                        </ul>
+                    </div>
+                </article>
 
-    <!-- Fun Project 2 -->
-    <div class="card fun-card">
-        <div class="card-inner">
-            <div class="card-preview">
-                <img src="images/ocr.png" alt="AI-Based Food Safety with OCR">
-            </div>
-            <div class="card-content">
-                <div class="card-number">02</div>
-                <h4>Winner - Visual AI Hackathon sponsored by Voxel51: AI-Based Food Safety with OCR</h4>
-                <p>Developed an OCR-based AI model to analyze food safety data for improved safety standards and inspection efficiency.</p>
-            </div>
-            <div class="card-overlay">
-                <button class="read-more" data-id="news">Read More</button>
-            </div>
-        </div>
-    </div>
+                <!-- 9. Task Master App [Existing] -->
+                <article class="card project-card animate">
+                    <div class="card-media-carousel">
+                        <div class="media-item active">
+                            <img src="images/task_manager.png" alt="Task Manager App" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>TaskMaster App</h4>
+                        </div>
+                        <p class="card-desc">Personalized task management app featuring real-time updates and role-based
+                            access.</p>
+                        <div class="card-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-text read-more" aria-label="Details about TaskMaster">View Project <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <a href="https://github.com/vamshin24" target="_blank" class="icon-link"
+                                aria-label="GitHub Repo"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-hidden-details" hidden>
+                        <h4>TaskMaster App</h4>
+                        <p>A Full Stack MERN application for project management.</p>
+                        <ul>
+                            <li>Built RESTful APIs with Node.js and Express.</li>
+                            <li>Created responsive UI with React and Redux.</li>
+                            <li>Implemented JWT authentication and role-based access control.</li>
+                        </ul>
+                    </div>
+                </article>
 
-    <!-- Fun Project 3 -->
-    <div class="card fun-card">
-        <div class="card-inner">
-            <div class="card-preview">
-                <img src="images/puAutomations.jpeg" alt="Devils Invent Hackathon">
-            </div>
-            <div class="card-content">
-                <div class="card-number">03</div>
-                <h4>Runner-up, Devils Invent Hackathon — Sponsored by Los Alamos National Laboratory (LANL)</h4>
-                <p>Automated the unpacking system for MiniFlow Ion Cells using AI and robotics for enhanced efficiency.                </p>
-            </div>
-            <div class="card-overlay">
-                <button class="read-more" data-id="fun-project3">Read More</button>
-            </div>
-        </div>
-    </div>
+                <!-- 10. Image Restoration [Existing] -->
+                <article class="card project-card animate">
+                    <div class="card-media-carousel">
+                        <div class="media-item active">
+                            <img src="images/imageRestoration.png" alt="Image Restoration" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Image Restoration</h4>
+                        </div>
+                        <p class="card-desc">CNN-based model to restore rain-affected images, enhancing consistency and
+                            accuracy.</p>
+                        <div class="card-tags">
+                            <span>Deep Learning</span>
+                            <span>CNN</span>
+                            <span>PyTorch</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-text read-more" aria-label="Details about Image Restoration">View Project
+                                <i class="fas fa-arrow-right"></i></button>
+                            <a href="https://github.com/vamshin24" target="_blank" class="icon-link"
+                                aria-label="GitHub Repo"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-hidden-details" hidden>
+                        <h4>Image Restoration</h4>
+                        <p>Deep learning model for removing rain streaks from images.</p>
+                        <ul>
+                            <li>Implemented a CNN based on ResNet architecture.</li>
+                            <li>Trained on synthetic rain datasets using PyTorch.</li>
+                            <li>Achieved high PSNR and SSIM scores on test data.</li>
+                        </ul>
+                    </div>
+                </article>
 
-    <!-- Fun Project 4 -->
-    <div class="card fun-card">
-        <div class="card-inner">
-            <div class="card-preview">
-                <img src="images/reactHackathon.jpeg" alt="Aerospace Factory Automation Hackathon">
+                <!-- 11. Performance enhancement of underwater communication [NEW] -->
+                <article class="card project-card animate">
+                    <div class="card-media-carousel">
+                        <div class="media-item active">
+                            <img src="images/UWOC.png" alt="Underwater Comm" loading="lazy">
+                        </div>
+                        <div class="media-item">
+                            <img src="images/underwater.png" alt="Underwater Comm 2" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Underwater Comm Enhanced</h4>
+                        </div>
+                        <p class="card-desc">Enhancing performance of underwater communication systems.</p>
+                        <div class="card-tags">
+                            <span>Communication</span>
+                            <span>Signal Processing</span>
+                            <span>Research</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-text read-more" aria-label="Details about Underwater Comm">View Project
+                                <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-hidden-details" hidden>
+                        <h2>Underwater Communication</h2>
+                        <h4>Performance Enhancement</h4>
+                        <p>Research and implementation of techniques to improve underwater data transmission.</p>
+                        <ul>
+                            <li>Analyzed channel characteristics of underwater acoustic environments.</li>
+                            <li>Proposed signal processing algorithms to reduce noise and interference.</li>
+                            <li>Simulated performance improvements using standard channel models.</li>
+                            <li>Developed a machine learning model in MATLAB to simulate light propagation in ocean
+                                waters, aiming to improve data rates and wireless capabilities for underwater Free Space
+                                Optical (FSO) links, addressing the bandwidth limitations of acoustic communication.
+                            </li>
+                            <li>Using NumPy and Simulink libraries, I built a simulation environment to model underwater
+                                optical channels, factoring in light scattering, absorption, and turbulence. </li>
+                            <li>The machine learning model optimized signal integrity and data recovery in challenging
+                                underwater conditions. </li>
+                            <li>This project showcased the potential of combining machine learning with optical
+                                communication to enable high-speed, reliable underwater data transfer for exploration,
+                                autonomous vehicles, and environmental monitoring. </li>
+                        </ul>
+                    </div>
+                </article>
             </div>
-            <div class="card-content">
-                <div class="card-number">04</div>
-                <h4>Aerospace Factory Automation Devils Invent Hackathon — Sponsored by Honeywell Aerospace</h4>
-                <p>Revolutionizing Supply Chains: Building a Blockchain Platform for Aerospace Automation</p>
-            </div>
-            <div class="card-overlay">
-                <button class="read-more" data-id="fun-project4">Read More</button>
-            </div>
-        </div>
-    </div>
 
-    <!-- Fun Project 5 -->
-    <div class="card fun-card">
-        <div class="card-inner">
-            <div class="card-preview">
-                <img src="images/endstar.jpeg" alt="Endstar Game">
+
+
+            <!-- Fun Projects Section (Restored) -->
+            <div class="section-heading">
+                <h3>Fun Projects</h3>
             </div>
-            <div class="card-content">
-                <div class="card-number">05</div>
-                <h4>Endstar Game Development Hackathon</h4>
-                <p>Crafted a multi-level interactive game using LUA scripting, AI decision trees, and UI/UX design, combining engaging gameplay with intelligent decision-making mechanics.</p>
+            <div class="cards-container">
+                <!-- 1. Aerospace Factory Automation (React Hackathon) -->
+                <article class="card project-card animate">
+                    <div class="card-media-carousel">
+                        <div class="media-item active">
+                            <img src="images/reactHackathon.jpeg" alt="Aerospace Factory Automation Hackathon"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Aerospace Factory Automation Devils Invent Hackathon — Sponsored by Honeywell Aerospace
+                            </h4>
+                        </div>
+                        <p class="card-desc">Revolutionizing Supply Chains: Building a Blockchain Platform for Aerospace
+                            Automation</p>
+                        <div class="card-tags">
+                            <span>React.js</span>
+                            <span>Blockchain</span>
+                            <span>Smart Contracts</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-text read-more" aria-label="Details about AeroChain">View Project <i
+                                    class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-hidden-details" hidden>
+                        <h2>AeroChain</h2>
+                        <p>In the AeroChain project, I worked as part of a team to address the inefficiencies in the
+                            aerospace supply chain. We developed a blockchain-based solution to streamline data
+                            management and provide centralized, real-time visibility into orders, shipments, and
+                            supplier performance. My contributions focused on leveraging AI-driven insights for demand
+                            prediction and proactive planning, while helping build features that enabled smart sourcing
+                            decisions and supported transparent, tamper-proof tracking of supply chain activities. I
+                            also helped integrate tools like an onboarding chatbot and a visual insight assistant,
+                            facilitating seamless interaction with the system. Our platform improved inventory
+                            management, reduced administrative costs, and fostered better supplier relationships. As
+                            part of the future development plan, I’m excited about incorporating digital twin
+                            simulations and sustainability features into the system for further optimization.</p>
+                        <p>Techstack used: React.js, Smart Contracts, Blockchain.</p>
+                    </div>
+                </article>
+
+                <!-- 2. PU Automations -->
+                <article class="card project-card animate">
+                    <div class="card-media-carousel">
+                        <div class="media-item active">
+                            <img src="images/puAutomations.jpeg" alt="Devils Invent Hackathon" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Runner-up, Devils Invent Hackathon — Sponsored by Los Alamos National Laboratory (LANL)
+                            </h4>
+                        </div>
+                        <p class="card-desc">Automated the unpacking system for MiniFlow Ion Cells using AI and robotics
+                            for enhanced efficiency.</p>
+                        <div class="card-tags">
+                            <span>Robotics</span>
+                            <span>AI</span>
+                            <span>Python</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-text read-more" aria-label="Details about Open-Seq-Me">View Project <i
+                                    class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-hidden-details" hidden>
+                        <h2>Open-Seq-Me</h2>
+                        <p>In the PU Automations Hackathon, I worked on automating the sample sequencing process in
+                            laboratory environments, which traditionally requires manual intervention for repetitive
+                            tasks. Our solution aimed to improve speed, precision, and reliability by integrating
+                            robotics, particularly the Dobot Magician Lite. The process involved automating the
+                            handling, cutting, retrieval, and placement of products into the sequencer, as well as
+                            efficiently discarding waste. Key technologies included laser cutting, a vibrating metal
+                            sheet for casing separation, and the use of a conveyor belt system for product movement. I
+                            contributed to the development of Sequoia, an AI-powered assistant built with LangChain and
+                            GPT-4 Turbo, which guides engineers and stakeholders through the automation process. By
+                            optimizing the workflow with just one robot and leveraging environmental factors, we reduced
+                            hardware complexity and costs, creating a more efficient and scalable solution. The project
+                            provided real-world experience in rapid prototyping, automation, and problem-solving,
+                            pushing the team to think creatively and work collaboratively.</p>
+                        <p>Techstack used: Dobot Magician Lite, AI, Python, Pydobot.</p>
+                    </div>
+                </article>
+
+                <!-- 3. Endstar -->
+                <article class="card project-card animate">
+                    <div class="card-media-carousel">
+                        <div class="media-item active">
+                            <img src="images/endstar.jpeg" alt="Endstar Game" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Endstar Game Development Hackathon</h4>
+                        </div>
+                        <p class="card-desc">Crafted a multi-level interactive game using LUA scripting, AI decision
+                            trees, and UI/UX design, combining engaging gameplay with intelligent decision-making
+                            mechanics.</p>
+                        <div class="card-tags">
+                            <span>LUA</span>
+                            <span>Game Dev</span>
+                            <span>AI</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-text read-more" aria-label="Details about Endstar">View Project <i
+                                    class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-hidden-details" hidden>
+                        <h2>Endstar Game Development</h2>
+                        <p>In the Endstar Game Maker Spark Challenge, the Team Educate! developed a game titled Sun
+                            Devil Hero: Saving President Crow. The game is designed to offer an engaging learning
+                            experience for freshmen at ASU, combining education with gaming in a fun and interactive
+                            environment. The story follows Agent Sparky, who must rescue President Crow within the game
+                            world. The game is built using Endstar, a platform focused on world-building and rapid
+                            application development (RAD), facilitating enterprise-level game development. Throughout
+                            the hackathon, the team leveraged AI and game design principles to create an immersive
+                            educational experience. The project demonstrated how games can be utilized for educational
+                            purposes while providing a valuable, hands-on experience with game development tools and
+                            platforms. The team learned key takeaways such as the ease of use and versatility of the
+                            Endstar platform, which supports both rapid development and deployment.</p>
+                        <p>Techstack used: LUA scripting, AI, Decision Trees, UI/UX Design.</p>
+                    </div>
+                </article>
+
+                <!-- 4. OCR -->
+                <article class="card project-card animate">
+                    <div class="card-media-carousel">
+                        <div class="media-item active">
+                            <img src="images/ocr.png" alt="AI-Based Food Safety with OCR" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Winner - Visual AI Hackathon sponsored by Voxel51: AI-Based Food Safety with OCR</h4>
+                        </div>
+                        <p class="card-desc">Developed an OCR-based AI model to analyze food safety data for improved
+                            safety standards and inspection efficiency.</p>
+                        <div class="card-tags">
+                            <span>OCR</span>
+                            <span>Computer Vision</span>
+                            <span>Python</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-text read-more" aria-label="Details about Food Sage">View Project <i
+                                    class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-hidden-details" hidden>
+                        <h2>Food Sage: OCR</h2>
+                        <p>This project WON! a hackathon organized by Voxel51, focusing on Visual AI. This project
+                            focuses on identifying and extracting the ingredients section from processed food packaging.
+                            The extracted ingredients are then categorized into three levels of potential harmfulness.
+                            By leveraging computer vision and optical character recognition (OCR) techniques, the system
+                            analyzes the ingredient lists and assesses their relative health impact.</p>
+                        <p>Techstack used: Python, OCR, Pytesseract.</p>
+                    </div>
+                </article>
             </div>
-            <div class="card-overlay">
-                <button class="read-more" data-id="fun-project5">Read More</button>
-            </div>
-        </div>
-    </div>
-</div>
-            
+
+
+
+
         </div>
     </section>
     <!-- Back to Top Button -->
@@ -328,9 +1115,11 @@
             </div>
             <div class="footer-right">
                 <div class="social-icons">
-                    <a href="https://linkedin.com/in/vamshin24" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/vamshin24" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:vamshin24@asu.edu"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/vamshin24" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/vamshin24" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="mailto:vamshin24@asu.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </div>
@@ -345,5 +1134,7 @@
     </div>
 
     <script src="js/script.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
+
 </html>

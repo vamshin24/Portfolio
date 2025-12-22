@@ -1,12 +1,16 @@
 /* Base Styles */
 :root {
-    --primary-color: #4b4646; /* Deep blue */
-    --secondary-color: #585555; /* Soft orange */
-    --accent-color: #8bffe8b8; /* Soft purple */
-    --light-color: #f8f9fa;
-    --dark-color: #16213e;
-    --text-color: #333;
-    --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --primary-color: #2D3436;
+    /* Dark Slate */
+    --secondary-color: #0984E3;
+    /* Electric Blue */
+    --accent-color: #00CEC9;
+    /* Teal */
+    --bg-color: #FFFFFF;
+    --text-color: #2D3436;
+    --light-bg: #F5F6FA;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
 * {
@@ -35,7 +39,10 @@ section {
     padding: 80px 0;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     margin-bottom: 20px;
 }
 
@@ -78,21 +85,26 @@ a:hover {
     z-index: 1000;
     height: 80px;
 }
+
 /* Hamburger menu styles */
 .hamburger-menu {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     background: none;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--primary-color);
 }
+
 .navbar-links {
     display: flex;
     align-items: center;
     /* flex-wrap: wrap; */
-    gap: 20px; /* Add spacing between items */
+    gap: 20px;
+    /* Add spacing between items */
 }
+
 .navbar-logo a {
     font-size: 1.5rem;
     font-weight: 600;
@@ -129,184 +141,338 @@ a:hover {
 .hero-section {
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-    background-color: var(--light-color);
+    background-color: var(--bg-color);
     padding-top: 80px;
-    z-index: 1;
-}
-
-.hero-content {
-    text-align: center;
-    max-width: 800px;
-    padding: 0 20px;
-}
-
-.hero-quote {
-    font-size: 2.4rem;
-    font-weight: 600;
-    margin-bottom: 40px;
-    color: var(--primary-color);
-}
-
-/* New email icon styling */
-.email-icon {
-    margin-top: 30px;
-}
-
-.email-icon a {
-    font-size: 2rem;
-    color: var(--primary-color);
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.email-icon a:hover {
-    color: var(--secondary-color);
-    transform: scale(1.2);
-}
-
-.contact-box {
-    background-color: white;
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: var(--card-shadow);
-    margin: 30px auto;
-    width: 80%;
-    max-width: 400px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 15px;
-}
-
-.social-icons a {
-    font-size: 1.8rem;
-    color: var(--secondary-color);
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: var(--secondary-color);
-    transform: scale(1.2);
-}
-
-.robot-animation {
-    position: absolute;
-    right: 10%;
-    top: 40%;
-    transform: translateY(-50%);
-}
-
-.robot-placeholder {
-    width: 200px;
-    height: 300px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
 }
 
-/* Simple Robot Animation */
-.robot {
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 40px;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+    z-index: 2;
+}
+
+.visiting-card {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: rgba(9, 132, 227, 0.1);
+    color: var(--secondary-color);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-quote {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.hero-subtext {
+    font-size: 1.1rem;
+    color: #636e72;
+    margin-bottom: 30px;
+    max-width: 90%;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.hero-socials {
+    justify-content: flex-start;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.hero-socials a {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hero-socials a:hover {
+    color: #0870c0;
+    transform: translateY(-3px);
+}
+
+/* Skill Clouds */
+.skill-cloud {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    z-index: 5;
+    animation: floatCloud 4s ease-in-out infinite;
+    border: 1px solid rgba(9, 132, 227, 0.15);
+    white-space: nowrap;
+}
+
+body.dark-mode .skill-cloud {
+    background: rgba(45, 52, 54, 0.95);
+    color: var(--light-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes floatCloud {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.highlight {
+    color: var(--secondary-color);
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: white;
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-primary:hover {
+    background-color: #0870c0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(9, 132, 227, 0.3);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-outline:hover {
+    background-color: rgba(9, 132, 227, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Button Updates for Arrow */
+.arrow-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.jumping-arrow {
+    display: inline-block;
+    animation: jumpPoint 1.5s infinite ease-in-out;
+    color: var(--primary-color);
+}
+
+@keyframes jumpPoint {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    25%,
+    75% {
+        transform: translateX(2px) scale(1.1);
+    }
+}
+
+.hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    width: 120px;
-    height: 200px;
-    animation: float 6s ease-in-out infinite;
-}
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+    height: 500px;
 }
 
-.robot-head {
-    width: 80px;
-    height: 80px;
-    background-color: var(--primary-color);
-    border-radius: 40px 40px 10px 10px;
-    position: absolute;
-    top: 0;
-    left: 20px;
+/* Robot SVG Animation */
+.robot-svg {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
 }
 
-.robot-body {
-    width: 100px;
-    height: 100px;
-    background-color: var(--primary-color);
-    border-radius: 40px 40px 10px 10px;
-    position: absolute;
-    top: 0;
-    left: 20px;
-    animation: headTilt 8s ease-in-out infinite;
-}
-@keyframes headTilt {
-    0%, 100% { transform: rotate(0deg); }
-    30% { transform: rotate(-5deg); }
-    70% { transform: rotate(5deg); }
+.robot-body-group {
+    animation: float 4s ease-in-out infinite;
 }
 
-.robot-arm {
-    width: 20px;
-    height: 80px;
-    background-color: var(--primary-color);
-    position: absolute;
-    top: 90px;
-    transition: transform 0.5s ease;
+.robot-arm-wave {
+    animation: wave 2.5s ease-in-out infinite;
+    transform-origin: 250px 210px;
+    /* origin set in SVG, adjusted here if needed */
 }
 
-.arm-left {
-    left: -10px;
-    animation: waveLeft 4s ease-in-out infinite;
-    transform-origin: top center;
-}
-
-.arm-right {
-    right: -10px;
-    animation: waveRight 4s ease-in-out infinite;
-    transform-origin: top center;
-}
-
-@keyframes waveLeft {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(-30deg); }
-    50% { transform: rotate(0deg); }
-    75% { transform: rotate(-15deg); }
-}
-
-@keyframes waveRight {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(30deg); }
-    50% { transform: rotate(0deg); }
-    75% { transform: rotate(15deg); }
-}
-.robot-head:before, .robot-head:after {
-    content: '';
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    top: 30px;
+.robot-eyes circle {
     animation: blink 4s infinite;
 }
-.robot-head:before {
-    left: 20px;
+
+.robot-shadow {
+    animation: shadowScale 4s ease-in-out infinite;
+    transform-origin: center;
 }
 
-.robot-head:after {
-    right: 20px;
+.robot-antenna-light {
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: rotate(30deg);
+    }
+
+    50% {
+        transform: rotate(70deg);
+    }
 }
 
 @keyframes blink {
-    0%, 48%, 52%, 100% { height: 15px; }
-    50% { height: 2px; }
+
+    0%,
+    45%,
+    55%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(0.1);
+        transform-origin: center;
+    }
 }
+
+@keyframes shadowScale {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scale(0.8);
+        opacity: 0.1;
+    }
+}
+
+@keyframes glow {
+    from {
+        fill: #F05454;
+        filter: drop-shadow(0 0 2px #F05454);
+    }
+
+    to {
+        fill: #ff7675;
+        filter: drop-shadow(0 0 8px #ff7675);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        /* Stack visual on top in DOM order, or change design */
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .hero-visual {
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .hero-content {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero-subtext {
+        margin: 0 auto 30px;
+    }
+
+    .hero-cta,
+    .hero-socials {
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .robot-body-group,
+    .robot-arm-wave,
+    .robot-eyes circle,
+    .robot-shadow,
+    .bounce-arrow {
+        animation: none;
+    }
+}
+
 .scroll-indicator {
     position: absolute;
     bottom: 30px;
@@ -321,9 +487,22 @@ a:hover {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-20px); }
-    60% { transform: translateY(-10px); }
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
 }
 
 /* About Section (Index Page) */
@@ -361,166 +540,298 @@ a:hover {
 }
 
 /* Updated Card Styles to match reference image */
+/* Modern Card Styles */
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     margin-bottom: 50px;
 }
 
 .featured-cards {
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    /* Featured work cards match the main grid */
+    grid-template-columns: repeat(2, 1fr);
 }
 
+/* Standard Card Styles */
 .card {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
     background-color: white;
-    border-radius: 20px;
-    overflow: hidden;
+    border-radius: 16px;
     box-shadow: var(--card-shadow);
+    overflow: hidden;
     position: relative;
-    height: 500px; /* Increased height to match reference */
-}
-
-.card-inner {
-    position: relative;
-    height: 100%;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
 }
 
-.card-preview {
-    height: 65%;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure Media Carousel fits nicely */
+.card-media-carousel {
     width: 100%;
+    height: 220px;
     overflow: hidden;
     position: relative;
+    background-color: #f5f5f5;
 }
 
-.card-preview img {
+
+/* Media Carousel Items */
+
+
+.media-item {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.card:hover .card-preview img {
-    transform: scale(1.05);
-    
-}
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
-.card:hover .card-content {
-    transform: translateY(-5px);
-}
-
-.card-logo {
-    height: 150px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.media-item.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.media-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.media-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Ensure full video is visible */
+    background: #000;
+    /* Black background for letterboxing */
+}
+
+/* For logos in work cards if needed, can use contain */
+.work-card .media-item img {
+    object-fit: contain;
     padding: 20px;
-    background-color: #f9f9f9;
+    background: #fff;
 }
 
-.card-logo img {
-    width: 100%; /* Make the image take up the full width of the container */
-    height: 100%; /* Make the image take up the full height of the container */
-    /* Ensures the image covers the container without distortion */
-    border-radius: 8px;
-}
-
-.card-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    font-family: 'Poppins', serif;
-}
-
+/* Card Content */
 .card-content {
-    transition: transform 0.3s ease;
     padding: 25px;
-    background-color: white;
-    position: relative;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    min-height: 200px; /* Ensures a minimum height for consistency */
-    box-sizing: border-box;
 }
 
-.card-content h4 {
-    font-size: 1.4rem;
-    margin: 20px 0 15px;
+.card-header {
+    margin-bottom: 12px;
 }
 
-.card-role {
+.card-header h4 {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.role-tag {
+    display: inline-block;
+    font-size: 0.85rem;
     color: var(--secondary-color);
     font-weight: 500;
-    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.card-overlay {
+/* Skills Card Styles */
+/* Skills Card Styles */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    /* Slightly reduced gap to help squeeze them in */
+    margin-bottom: 50px;
+}
+
+.skill-card {
+    height: auto !important;
+    min-height: 180px;
+}
+
+.skill-card .card-content {
+    padding: 20px;
+    justify-content: flex-start;
+}
+
+.skill-card .card-header h4 {
+    font-size: 1.1rem;
+}
+
+.skill-card .card-tags {
+    justify-content: flex-start;
+    margin-top: 15px;
+    gap: 8px;
+}
+
+.skill-card .card-tags span {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+}
+
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Carousel Controls */
+.carousel-btn {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    padding: 50px 20px 20px;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.card:hover .card-overlay {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.read-more {
-    background-color: var(--primary-color);
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px 30px;
-    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
     cursor: pointer;
-    font-weight: 500;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transition: background 0.3s ease;
+    opacity: 0.5;
+    /* Hidden by default, shown on hover */
 }
 
-.read-more:before {
-    content: '';
+.card-media-carousel:hover .carousel-btn {
+    opacity: 1;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-dots {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: var(--secondary-color);
-    transition: height 0.3s ease;
-    z-index: -1;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+    z-index: 10;
 }
 
-.read-more:hover {
-    transform: translateY(-3px);
-    color: white;
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-.read-more:hover:before {
-    height: 100%;
+.carousel-dot.active {
+    background: white;
 }
 
-/* Fun Section - now integrated into Projects */
-.fun-card .card-number {
-    color: rgba(147, 112, 219, 0.2); /* Soft purple with opacity */
+.card-desc {
+    font-size: 0.95rem;
+    color: #636e72;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    flex-grow: 1;
+    /* Pushes footer down */
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.card-tags span {
+    font-size: 0.75rem;
+    background-color: rgba(9, 132, 227, 0.08);
+    /* Light secondary color */
+    color: var(--secondary-color);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 15px;
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.3s ease;
+}
+
+.btn-text:hover {
+    gap: 12px;
+    /* Arrow moves on hover */
+    color: #0870c0;
+}
+
+.icon-link {
+    font-size: 1.2rem;
+    color: #b2bec3;
+    transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+    color: var(--primary-color);
+}
+
+/* Fun Card tweaks to distinguish them if needed */
+.fun-card .card-header h4 {
+    color: #6c5ce7;
+    /* Purple accent */
+}
+
+.fun-card .btn-text {
+    color: #6c5ce7;
 }
 
 /* Footer */
@@ -541,7 +852,9 @@ footer {
 }
 
 /* Updated footer styles */
-.footer-left, .footer-center, .footer-right {
+.footer-left,
+.footer-center,
+.footer-right {
     flex: 1;
 }
 
@@ -566,51 +879,78 @@ footer {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0);
-    transition: background-color 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Applied immediately for stability */
+    transition: all 0.3s ease;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on mobile */
 }
 
 .modal-content {
     position: relative;
     background-color: white;
-    margin: 5vh auto; /* Changed from 10% to 5vh */
+    margin: 60px auto 30px;
+    /* Top margin for close button */
     padding: 30px;
-    width: 80%;
-    max-width: 700px;
+    width: 90%;
+    /* Mobile first */
+    max-width: 800px;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    animation: modalopen 0.3s;
-    transform: scale(0.8);
-    opacity: 0;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
-}
-
-.modal.active .modal-content {
-    transform: scale(1);
-    opacity: 1;
-}
-.modal.active {
-    background-color: rgba(0, 0, 0, 0.7);
+    animation: modalopen 0.4s;
 }
 
 @keyframes modalopen {
-    from { opacity: 0; transform: translateY(-50px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .close-modal {
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    font-size: 2rem;
+    position: fixed;
+    /* Fixed to screen */
+    top: 20px;
+    left: 20px;
+    /* Top left as requested */
+    font-size: 35px;
+    color: white;
     cursor: pointer;
+    z-index: 2100;
+    /* Above modal content */
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    transition: background-color 0.3s;
+}
+
+.close-modal:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .modal-content {
+        margin: 5vh auto;
+    }
 }
 
 /* Added Styles for About Page */
 /* About Page Section Styles */
 #about-me.about-section {
-    padding-top: 120px; /* Account for fixed navbar */
+    padding-top: 120px;
+    /* Account for fixed navbar */
 }
 
 .section-title {
@@ -628,7 +968,8 @@ footer {
 #about-me .about-content {
     display: flex;
     gap: 60px;
-    flex-direction: row-reverse; /* Image on right, text on left */
+    flex-direction: row-reverse;
+    /* Image on right, text on left */
     align-items: flex-start;
     justify-content: space-between;
 }
@@ -686,6 +1027,7 @@ footer {
 .interests-column li {
     margin-bottom: 8px;
 }
+
 .education-list {
     list-style: none;
     padding: 0;
@@ -704,6 +1046,7 @@ footer {
     display: block;
     margin-top: 5px;
 }
+
 /* Back to Top Button */
 .back-to-top {
     font-size: 1.5rem;
@@ -724,28 +1067,41 @@ footer {
     visibility: visible;
 }
 
-.back-to-top:hover {
 
+.back-to-top:hover {
+    transform: translateY(-5px);
 }
 
 .back-to-top i {
     font-size: 2rem;
 }
+
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { 
-        transform: translateY(0); /* Normal position */
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+        /* Normal position */
     }
-    40% { 
-        transform: translateY(-20px); /* Move up by 20px at the peak */
+
+    40% {
+        transform: translateY(-20px);
+        /* Move up by 20px at the peak */
     }
-    60% { 
-        transform: translateY(-10px); /* Move slightly up after peak */
+
+    60% {
+        transform: translateY(-10px);
+        /* Move slightly up after peak */
     }
 }
+
 /* Dark Mode Styles */
 body.dark-mode {
     background-color: #121212;
-color: #f0f0f0;
+    color: #f0f0f0;
 }
 
 body.dark-mode .navbar {
@@ -753,7 +1109,7 @@ body.dark-mode .navbar {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-body.dark-mode .navbar a, 
+body.dark-mode .navbar a,
 body.dark-mode .navbar-logo a {
     color: #f0f0f0;
 }
@@ -767,16 +1123,22 @@ body.dark-mode .hero-quote {
 }
 
 body.dark-mode .contact-box {
-    background-color: rgba(30, 30, 30, 0.95); /* Add a background color for dark mode */
-    color: var(--light-color); /* Change text color for dark mode */
-    border: 1px solid var(--light-border-color); /* Optional: Add a border for better visibility */
+    background-color: rgba(30, 30, 30, 0.95);
+    /* Add a background color for dark mode */
+    color: var(--light-color);
+    /* Change text color for dark mode */
+    border: 1px solid var(--light-border-color);
+    /* Optional: Add a border for better visibility */
 }
+
 body.dark-mode .social-icons a {
-    color: var(--light-color); /* Change the icon color in dark mode */
+    color: var(--light-color);
+    /* Change the icon color in dark mode */
 }
 
 body.dark-mode .social-icons a:hover {
-    color: var(--accent-color); /* Optional: Add a hover color for the icons in dark mode */
+    color: var(--accent-color);
+    /* Optional: Add a hover color for the icons in dark mode */
 }
 
 body.dark-mode .card {
@@ -805,37 +1167,86 @@ body.dark-mode .modal-content {
 }
 
 body.dark-mode .read-more {
-    background-color: var(--accent-color);
+    background: none;
+    /* Remove conflicting background */
 }
+
+/* Enhanced Dark Mode Text Visibility */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode .card-header h4 {
+    color: #f5f6fa;
+    /* Almost white */
+}
+
+body.dark-mode p,
+body.dark-mode .card-desc,
+body.dark-mode li {
+    color: #dcdde1;
+    /* Light grey for text */
+}
+
+body.dark-mode .btn-text {
+    color: var(--accent-color);
+    /* Bright Teal for visibility */
+    font-weight: 700;
+}
+
+body.dark-mode .btn-text:hover {
+    color: #fff;
+}
+
+body.dark-mode .icon-link {
+    color: #b2bec3;
+}
+
+body.dark-mode .icon-link:hover {
+    color: #fff;
+}
+
+body.dark-mode .role-tag {
+    color: #a29bfe;
+    /* Light purple for role tags */
+    background-color: rgba(162, 155, 254, 0.1);
+}
+
 body.dark-mode footer {
-    background-color: rgba(30, 30, 30, 0.95); /* Dark background for footer */
-    color: var(--light-color); /* Light text color for dark mode */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Adjust shadow for dark mode */
+    background-color: rgba(30, 30, 30, 0.95);
+    /* Dark background for footer */
+    color: var(--light-color);
+    /* Light text color for dark mode */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    /* Adjust shadow for dark mode */
 }
 
 body.dark-mode .footer-content a {
-    color: var(--light-color); /* Ensure links in the footer are visible in dark mode */
+    color: var(--light-color);
+    /* Ensure links in the footer are visible in dark mode */
 }
 
 body.dark-mode .footer-content a:hover {
-    color: var(--accent-color); /* Optional: Add a hover effect for links in dark mode */
+    color: var(--accent-color);
+    /* Optional: Add a hover effect for links in dark mode */
 }
 
 /* Dark mode toggle button */
 .dark-mode-toggle {
-display: flex;
-align-items: center;
-justify-content: center;
-width: 40px;
-height: 40px;
-border-radius: 50%;
-background-color: var(--primary-color);
-color: white;
-cursor: pointer;
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-transition: all 0.3s ease;
-margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-right: 20px;
 }
+
 .navbar-right {
     display: flex;
     align-items: center;
@@ -849,21 +1260,32 @@ margin-right: 20px;
     font-size: 1.2rem;
 }
 
-    
-    footer .social-icons a {
-        font-size: 1.5rem;
-        color: var(--secondary-color); /* Changed from primary-color to secondary-color */
-        transition: transform 0.3s ease, color 0.3s ease;
-        margin: 0 10px;
-    }
-    
-    footer .social-icons a:hover {
-        color: var(--secondary-color); /* Changed to accent-color */
-        transform: scale(1.2);
-    }
-.stagger-delay-1 { transition-delay: 0.1s; }
-.stagger-delay-2 { transition-delay: 0.2s; }
-.stagger-delay-3 { transition-delay: 0.3s; }
+
+footer .social-icons a {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    /* Changed from primary-color to secondary-color */
+    transition: transform 0.3s ease, color 0.3s ease;
+    margin: 0 10px;
+}
+
+footer .social-icons a:hover {
+    color: var(--secondary-color);
+    /* Changed to accent-color */
+    transform: scale(1.2);
+}
+
+.stagger-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.stagger-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.stagger-delay-3 {
+    transition-delay: 0.3s;
+}
 
 
 /* Media Queries for Responsiveness */
@@ -871,7 +1293,7 @@ margin-right: 20px;
     .hero-quote {
         font-size: 2.3rem;
     }
-    
+
     .robot-animation {
         position: relative;
         right: auto;
@@ -879,11 +1301,12 @@ margin-right: 20px;
         transform: none;
         margin: 30px 0;
     }
-    
-    .cards-container, .featured-cards {
+
+    .cards-container,
+    .featured-cards {
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     }
-    
+
     #about-me .about-text,
     #about-me .profile-image {
         max-width: 100%;
@@ -892,13 +1315,16 @@ margin-right: 20px;
 
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Stack the navbar items vertically */
-        align-items: flex-start; /* Align items to the left */
+        flex-direction: column;
+        /* Stack the navbar items vertically */
+        align-items: flex-start;
+        /* Align items to the left */
         padding: 15px 20px;
     }
 
     .hamburger-menu {
-        display: block; /* Show hamburger menu on smaller screens */
+        display: block;
+        /* Show hamburger menu on smaller screens */
         background: none;
         border: none;
         font-size: 1.5rem;
@@ -907,12 +1333,17 @@ margin-right: 20px;
     }
 
     .navbar-links {
-        display: none; /* Hide links by default */
-        flex-direction: column; /* Stack the links vertically */
-        width: 100%; /* Take full width */
-        gap: 20px; /* Adjust spacing between links */
+        display: none;
+        /* Hide links by default */
+        flex-direction: column;
+        /* Stack the links vertically */
+        width: 100%;
+        /* Take full width */
+        gap: 20px;
+        /* Adjust spacing between links */
         position: absolute;
-        top: 80px; /* Position below the navbar */
+        top: 80px;
+        /* Position below the navbar */
         left: 0;
         background-color: rgba(255, 255, 255, 0.95);
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -921,7 +1352,8 @@ margin-right: 20px;
     }
 
     .navbar-links.active {
-        display: flex; /* Show links when active */
+        display: flex;
+        /* Show links when active */
     }
 
     .navbar-links a {
@@ -938,8 +1370,10 @@ margin-right: 20px;
     }
 
     .hero-section {
-        padding-top: 100px; /* Increase padding for smaller screens */
-        height: auto; /* Let the height adjust dynamically */
+        padding-top: 100px;
+        /* Increase padding for smaller screens */
+        height: auto;
+        /* Let the height adjust dynamically */
     }
 
     .about-content {
@@ -951,7 +1385,8 @@ margin-right: 20px;
         flex: 0 0 250px;
     }
 
-    .cards-container, .featured-cards {
+    .cards-container,
+    .featured-cards {
         grid-template-columns: 1fr;
     }
 
@@ -978,7 +1413,9 @@ margin-right: 20px;
         gap: 15px;
     }
 
-    .footer-left, .footer-center, .footer-right {
+    .footer-left,
+    .footer-center,
+    .footer-right {
         text-align: center;
     }
 
@@ -1060,9 +1497,76 @@ margin-right: 20px;
             opacity: 0;
             transform: translateY(20px);
         }
+
         to {
             opacity: 1;
             transform: translateY(0);
         }
     }
+}
+
+/* Modal Media Gallery Overrides */
+.modal-media-gallery {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    /* Fixed height for carousel */
+    margin-bottom: 25px;
+    background: #000;
+    /* Dark background for media */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-media-gallery .media-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+}
+
+.modal-media-gallery .media-item.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.modal-media-gallery .media-item img,
+.modal-media-gallery .media-item video {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* Ensure full image is seen */
+    border-radius: 0;
+    /* Remove radius on inner item to fit container */
+    box-shadow: none;
+}
+
+.modal-text-content {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.modal-text-content h2,
+.modal-text-content h4 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.modal-text-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.modal-text-content li {
+    margin-bottom: 5px;
 }
