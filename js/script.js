@@ -22,6 +22,21 @@ document.addEventListener('DOMContentLoaded', function () {
         icon.classList.add('fa-sun');
     }
 
+    // Title Rotator for Hero section
+    const rotatingText = document.getElementById('rotating-text');
+    if (rotatingText) {
+        const words = ["Software", "Backend", "Robotics Software", "Applied AI", "Distributed Systems"];
+        let wordIndex = 0;
+        setInterval(() => {
+            rotatingText.classList.add('fade-out');
+            setTimeout(() => {
+                wordIndex = (wordIndex + 1) % words.length;
+                rotatingText.textContent = words[wordIndex];
+                rotatingText.classList.remove('fade-out');
+            }, 250); // Matches transition duration in CSS (0.25s)
+        }, 3000); // 3 seconds interval
+    }
+
     // Toggle dark mode when button is clicked
     darkModeToggle.addEventListener('click', function () {
         document.body.classList.toggle('dark-mode');

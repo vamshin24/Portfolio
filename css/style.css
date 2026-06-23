@@ -192,6 +192,17 @@ a:hover {
     color: var(--primary-color);
 }
 
+/* Rotating Sub-role Text Animation */
+#rotating-text {
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
+    display: inline-block;
+}
+
+#rotating-text.fade-out {
+    opacity: 0;
+}
+
 .hero-subtext {
     font-size: 1.1rem;
     color: #636e72;
@@ -240,9 +251,15 @@ a:hover {
 
 body.dark-mode .skill-cloud {
     background: rgba(45, 52, 54, 0.95);
-    color: var(--light-color);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #8bffe8;
+    border: 1px solid rgba(139, 255, 232, 0.2);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .skill-cloud {
+        display: none;
+    }
 }
 
 @keyframes floatCloud {
@@ -320,6 +337,45 @@ body.dark-mode .skill-cloud {
     75% {
         transform: translateX(2px) scale(1.1);
     }
+}
+
+/* Skill Chips in Hero Section */
+.skill-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.skill-chips .chip {
+    font-size: 0.8rem;
+    background-color: rgba(9, 132, 227, 0.08);
+    color: var(--secondary-color);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: 1px solid rgba(9, 132, 227, 0.15);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.skill-chips .chip:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(9, 132, 227, 0.2);
+}
+
+body.dark-mode .skill-chips .chip {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #8bffe8;
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .skill-chips .chip:hover {
+    background-color: #8bffe8;
+    color: var(--primary-color);
+    box-shadow: 0 4px 10px rgba(139, 255, 232, 0.3);
 }
 
 .hero-visual {
